@@ -1,0 +1,26 @@
+plugins {
+    id "java-library"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor(platform("io.micronaut:micronaut-bom:$micronautVersion"))
+    annotationProcessor "io.micronaut:micronaut-inject-java"
+    implementation(platform("io.micronaut:micronaut-bom:$micronautVersion"))
+    api("io.micronaut.aws:micronaut-function-aws")
+    implementation("com.amazonaws:aws-lambda-java-events:3.11.0")
+    api(project(":core"))
+    testAnnotationProcessor(platform("io.micronaut:micronaut-bom:$micronautVersion"))
+    testAnnotationProcessor "io.micronaut:micronaut-inject-java"
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+}
+test.useJUnitPlatform()
+
+java {
+    sourceCompatibility = JavaVersion.toVersion("11")
+    targetCompatibility = JavaVersion.toVersion("11")
+}

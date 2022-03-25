@@ -1,0 +1,1594 @@
+
+> Task :app:dependencies
+
+------------------------------------------------------------
+Project ':app'
+------------------------------------------------------------
+
+annotationProcessor - Annotation processors and their dependencies for source set 'main'.
++--- io.micronaut:micronaut-graal -> 3.4.0
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2
+|    |    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    |         \--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    \--- io.micronaut:micronaut-inject:3.4.0
+|         +--- org.slf4j:slf4j-api:1.7.29
+|         +--- javax.annotation:javax.annotation-api:1.3.2
+|         +--- jakarta.inject:jakarta.inject-api:2.0.1
+|         +--- jakarta.annotation:jakarta.annotation-api:2.0.0
+|         +--- io.micronaut:micronaut-core:3.4.0
+|         |    \--- org.slf4j:slf4j-api:1.7.29
+|         \--- org.yaml:snakeyaml:1.30
++--- io.micronaut:micronaut-inject-java -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    \--- io.micronaut:micronaut-aop:3.4.0
+|         +--- org.slf4j:slf4j-api:1.7.29
+|         +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|         \--- io.micronaut:micronaut-core:3.4.0 (*)
++--- io.micronaut:micronaut-validation -> 3.4.0
+|    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15
+|    |    \--- org.reactivestreams:reactive-streams:1.0.3
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    \--- org.reactivestreams:reactive-streams:1.0.3
+|    \--- javax.validation:validation-api:2.0.1.Final
+\--- io.micronaut:micronaut-bom:3.4.0
+     +--- org.codehaus.groovy:groovy-bom:3.0.9 -> 3.0.10
+     +--- io.grpc:grpc-bom:1.39.0
+     +--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+     +--- org.junit:junit-bom:5.7.2 -> 5.8.2
+     +--- org.jetbrains.kotlin:kotlin-bom:1.6.10
+     +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1
+     +--- io.ktor:ktor-bom:1.6.1
+     +--- io.micrometer:micrometer-bom:1.8.3
+     +--- io.micronaut.aws:micronaut-aws-bom:3.2.1
+     +--- io.micronaut.azure:micronaut-azure-bom:3.2.3
+     |    \--- com.azure:azure-sdk-bom:1.1.1
+     +--- io.micronaut.cache:micronaut-cache-bom:3.3.0
+     +--- io.micronaut.coherence:micronaut-coherence-bom:3.0.1
+     +--- io.micronaut.data:micronaut-data-bom:3.3.0
+     +--- io.micronaut.email:micronaut-email-bom:1.2.0
+     +--- io.micronaut.flyway:micronaut-flyway-bom:5.2.0
+     +--- io.micronaut.gcp:micronaut-gcp-bom:4.1.1
+     +--- io.micronaut.groovy:micronaut-groovy-bom:3.1.0
+     |    \--- org.codehaus.groovy:groovy-bom:3.0.10
+     +--- io.micronaut.kotlin:micronaut-kotlin-bom:3.2.2
+     +--- io.micronaut.kubernetes:micronaut-kubernetes-bom:3.4.0
+     +--- io.micronaut.micrometer:micronaut-micrometer-bom:4.2.0
+     +--- io.micronaut.mongodb:micronaut-mongo-bom:4.1.0
+     +--- io.micronaut.mqtt:micronaut-mqtt-bom:2.1.0
+     +--- io.micronaut.oraclecloud:micronaut-oraclecloud-bom:2.1.1
+     +--- io.micronaut.problem:micronaut-problem-json-bom:2.2.2
+     +--- io.micronaut.r2dbc:micronaut-r2dbc-bom:2.1.0
+     |    \--- io.r2dbc:r2dbc-bom:Arabba-SR11
+     +--- io.micronaut.reactor:micronaut-reactor-bom:2.2.2
+     |    \--- io.projectreactor:reactor-core:3.4.15 (c)
+     +--- io.micronaut.redis:micronaut-redis-bom:5.2.0
+     +--- io.micronaut.rxjava2:micronaut-rxjava2-bom:1.2.1
+     +--- io.micronaut.rxjava3:micronaut-rxjava3-bom:2.2.1
+     +--- io.micronaut.security:micronaut-security-bom:3.5.0
+     +--- io.micronaut.serde:micronaut-serde-bom:1.0.0
+     +--- io.micronaut.servlet:micronaut-servlet-bom:3.2.1
+     +--- io.micronaut.sql:micronaut-sql-bom:4.2.2
+     |    \--- org.jdbi:jdbi3-bom:3.20.1
+     +--- io.micronaut.test:micronaut-test-bom:3.1.1
+     |    +--- org.junit:junit-bom:5.8.2
+     |    \--- org.spockframework:spock-bom:2.0-groovy-3.0
+     +--- io.micronaut.tracing:micronaut-tracing-bom:4.1.1
+     +--- io.micronaut.views:micronaut-views-bom:3.2.0
+     +--- io.netty:netty-bom:4.1.73.Final
+     +--- com.google.protobuf:protobuf-bom:3.17.2
+     +--- org.testcontainers:testcontainers-bom:1.16.2
+     +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+     +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+     +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+     +--- jakarta.annotation:jakarta.annotation-api:2.0.0 (c)
+     +--- javax.annotation:javax.annotation-api:1.3.2 (c)
+     +--- io.micronaut.test:micronaut-test-bom:3.1.1 (c)
+     +--- org.reactivestreams:reactive-streams:1.0.3 (c)
+     +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (c)
+     +--- org.slf4j:slf4j-api:1.7.29 (c)
+     +--- org.yaml:snakeyaml:1.30 (c)
+     +--- javax.validation:validation-api:2.0.1.Final (c)
+     +--- io.micronaut:micronaut-aop:3.4.0 (c)
+     +--- io.micronaut:micronaut-core:3.4.0 (c)
+     +--- io.micronaut:micronaut-core-reactive:3.4.0 (c)
+     +--- io.micronaut:micronaut-graal:3.4.0 (c)
+     +--- io.micronaut:micronaut-inject:3.4.0 (c)
+     +--- io.micronaut:micronaut-inject-java:3.4.0 (c)
+     \--- io.micronaut:micronaut-validation:3.4.0 (c)
+
+api - API dependencies for source set 'main'. (n)
+\--- io.micronaut:micronaut-inject (n)
+
+apiElements - API elements for main. (n)
+No dependencies
+
+archives - Configuration for archive artifacts. (n)
+No dependencies
+
+compileClasspath - Compile classpath for source set 'main'.
++--- io.micronaut:micronaut-inject -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- javax.annotation:javax.annotation-api:1.3.2
+|    +--- jakarta.inject:jakarta.inject-api:2.0.1
+|    +--- jakarta.annotation:jakarta.annotation-api:2.0.0
+|    +--- io.micronaut:micronaut-core:3.4.0
+|    |    \--- org.slf4j:slf4j-api:1.7.29
+|    \--- org.yaml:snakeyaml:1.30
++--- io.micronaut:micronaut-jackson-databind -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-jackson-core:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    |    +--- io.micronaut:micronaut-context:3.4.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    +--- io.micronaut:micronaut-aop:3.4.0
+|    |    |    |    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    |    \--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |    |    \--- javax.validation:validation-api:2.0.1.Final
+|    |    |    \--- io.micronaut:micronaut-http:3.4.0
+|    |    |         +--- org.slf4j:slf4j-api:1.7.29
+|    |    |         +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |         \--- io.micronaut:micronaut-core-reactive:3.4.0
+|    |    |              +--- org.slf4j:slf4j-api:1.7.29
+|    |    |              +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |              \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2
+|    |    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    |         \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    \--- com.fasterxml.jackson.core:jackson-annotations:2.13.2
+|    |         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2
+|         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
++--- io.micronaut:micronaut-runtime -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-aop:3.4.0 (*)
+|    +--- io.micronaut:micronaut-context:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (*)
+|    \--- javax.validation:validation-api:2.0.1.Final
++--- jakarta.annotation:jakarta.annotation-api -> 2.0.0
++--- com.amazonaws:aws-lambda-java-events:3.11.0
+|    \--- joda-time:joda-time:2.6
++--- io.micronaut:micronaut-validation -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    \--- javax.validation:validation-api:2.0.1.Final
++--- io.micronaut.aws:micronaut-function-aws -> 3.2.1
+|    +--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-function:3.3.4 -> 3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-http:3.4.0 (*)
+|    \--- com.amazonaws:aws-lambda-java-core:1.2.1
+\--- io.micronaut:micronaut-bom:3.4.0
+     +--- org.codehaus.groovy:groovy-bom:3.0.9 -> 3.0.10
+     +--- io.grpc:grpc-bom:1.39.0
+     +--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+     +--- org.junit:junit-bom:5.7.2 -> 5.8.2
+     +--- org.jetbrains.kotlin:kotlin-bom:1.6.10
+     +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1
+     +--- io.ktor:ktor-bom:1.6.1
+     +--- io.micrometer:micrometer-bom:1.8.3
+     +--- io.micronaut.aws:micronaut-aws-bom:3.2.1
+     |    \--- io.micronaut.aws:micronaut-function-aws:3.2.1 (c)
+     +--- io.micronaut.azure:micronaut-azure-bom:3.2.3
+     |    \--- com.azure:azure-sdk-bom:1.1.1
+     +--- io.micronaut.cache:micronaut-cache-bom:3.3.0
+     +--- io.micronaut.coherence:micronaut-coherence-bom:3.0.1
+     +--- io.micronaut.data:micronaut-data-bom:3.3.0
+     +--- io.micronaut.email:micronaut-email-bom:1.2.0
+     +--- io.micronaut.flyway:micronaut-flyway-bom:5.2.0
+     +--- io.micronaut.gcp:micronaut-gcp-bom:4.1.1
+     +--- io.micronaut.groovy:micronaut-groovy-bom:3.1.0
+     |    \--- org.codehaus.groovy:groovy-bom:3.0.10
+     +--- io.micronaut.kotlin:micronaut-kotlin-bom:3.2.2
+     +--- io.micronaut.kubernetes:micronaut-kubernetes-bom:3.4.0
+     +--- io.micronaut.micrometer:micronaut-micrometer-bom:4.2.0
+     +--- io.micronaut.mongodb:micronaut-mongo-bom:4.1.0
+     +--- io.micronaut.mqtt:micronaut-mqtt-bom:2.1.0
+     +--- io.micronaut.oraclecloud:micronaut-oraclecloud-bom:2.1.1
+     +--- io.micronaut.problem:micronaut-problem-json-bom:2.2.2
+     +--- io.micronaut.r2dbc:micronaut-r2dbc-bom:2.1.0
+     |    \--- io.r2dbc:r2dbc-bom:Arabba-SR11
+     +--- io.micronaut.reactor:micronaut-reactor-bom:2.2.2
+     +--- io.micronaut.redis:micronaut-redis-bom:5.2.0
+     +--- io.micronaut.rxjava2:micronaut-rxjava2-bom:1.2.1
+     +--- io.micronaut.rxjava3:micronaut-rxjava3-bom:2.2.1
+     +--- io.micronaut.security:micronaut-security-bom:3.5.0
+     +--- io.micronaut.serde:micronaut-serde-bom:1.0.0
+     +--- io.micronaut.servlet:micronaut-servlet-bom:3.2.1
+     +--- io.micronaut.sql:micronaut-sql-bom:4.2.2
+     |    \--- org.jdbi:jdbi3-bom:3.20.1
+     +--- io.micronaut.test:micronaut-test-bom:3.1.1
+     |    +--- org.junit:junit-bom:5.8.2
+     |    \--- org.spockframework:spock-bom:2.0-groovy-3.0
+     +--- io.micronaut.tracing:micronaut-tracing-bom:4.1.1
+     +--- io.micronaut.views:micronaut-views-bom:3.2.0
+     +--- io.netty:netty-bom:4.1.73.Final
+     +--- com.google.protobuf:protobuf-bom:3.17.2
+     +--- org.testcontainers:testcontainers-bom:1.16.2
+     +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+     +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+     +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+     +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+     +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+     +--- jakarta.annotation:jakarta.annotation-api:2.0.0 (c)
+     +--- javax.annotation:javax.annotation-api:1.3.2 (c)
+     +--- io.micronaut.test:micronaut-test-bom:3.1.1 (c)
+     +--- org.reactivestreams:reactive-streams:1.0.3 (c)
+     +--- org.slf4j:slf4j-api:1.7.29 (c)
+     +--- org.yaml:snakeyaml:1.30 (c)
+     +--- javax.validation:validation-api:2.0.1.Final (c)
+     +--- io.micronaut:micronaut-aop:3.4.0 (c)
+     +--- io.micronaut:micronaut-context:3.4.0 (c)
+     +--- io.micronaut:micronaut-core:3.4.0 (c)
+     +--- io.micronaut:micronaut-core-reactive:3.4.0 (c)
+     +--- io.micronaut:micronaut-function:3.4.0 (c)
+     +--- io.micronaut:micronaut-http:3.4.0 (c)
+     +--- io.micronaut:micronaut-inject:3.4.0 (c)
+     +--- io.micronaut:micronaut-jackson-core:3.4.0 (c)
+     +--- io.micronaut:micronaut-jackson-databind:3.4.0 (c)
+     +--- io.micronaut:micronaut-json-core:3.4.0 (c)
+     +--- io.micronaut:micronaut-runtime:3.4.0 (c)
+     \--- io.micronaut:micronaut-validation:3.4.0 (c)
+
+compileOnly - Compile only dependencies for source set 'main'. (n)
+No dependencies
+
+compileOnlyApi - Compile only API dependencies for source set 'main'. (n)
+No dependencies
+
+default - Configuration for default artifacts. (n)
+No dependencies
+
+implementation - Implementation only dependencies for source set 'main'. (n)
++--- io.micronaut:micronaut-jackson-databind (n)
++--- io.micronaut:micronaut-runtime (n)
++--- jakarta.annotation:jakarta.annotation-api (n)
++--- com.amazonaws:aws-lambda-java-events:3.11.0 (n)
++--- io.micronaut:micronaut-validation (n)
+\--- io.micronaut.aws:micronaut-function-aws (n)
+
+mainSourceElements - List of source directories contained in the Main SourceSet. (n)
+No dependencies
+
+micronautBoms - BOMs which will be applied by the Micronaut plugins (n)
+\--- io.micronaut:micronaut-bom:3.4.0 (n)
+
+nativeImageClasspath
++--- io.micronaut:micronaut-inject -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- javax.annotation:javax.annotation-api:1.3.2
+|    +--- jakarta.inject:jakarta.inject-api:2.0.1
+|    +--- jakarta.annotation:jakarta.annotation-api:2.0.0
+|    +--- io.micronaut:micronaut-core:3.4.0
+|    |    \--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    \--- org.yaml:snakeyaml:1.30
++--- io.micronaut:micronaut-jackson-databind -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-jackson-core:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    +--- io.micronaut:micronaut-context:3.4.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    +--- io.micronaut:micronaut-aop:3.4.0
+|    |    |    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    |    \--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |    |    \--- javax.validation:validation-api:2.0.1.Final
+|    |    |    \--- io.micronaut:micronaut-http:3.4.0
+|    |    |         +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15
+|    |    |         |    \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    |         +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |         +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |         \--- io.micronaut:micronaut-core-reactive:3.4.0
+|    |    |              +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |              +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |              \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2
+|    |    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    |         \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    \--- com.fasterxml.jackson.core:jackson-annotations:2.13.2
+|    |         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2
+|         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
++--- io.micronaut:micronaut-runtime -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-aop:3.4.0 (*)
+|    +--- io.micronaut:micronaut-context:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (*)
+|    +--- javax.validation:validation-api:2.0.1.Final
+|    \--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
++--- jakarta.annotation:jakarta.annotation-api -> 2.0.0
++--- com.amazonaws:aws-lambda-java-events:3.11.0
+|    \--- joda-time:joda-time:2.6
++--- io.micronaut:micronaut-validation -> 3.4.0
+|    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    \--- javax.validation:validation-api:2.0.1.Final
++--- io.micronaut.aws:micronaut-function-aws -> 3.2.1
+|    +--- io.micronaut:micronaut-bom:3.3.4 -> 3.4.0
+|    |    +--- org.codehaus.groovy:groovy-bom:3.0.9 -> 3.0.10
+|    |    +--- io.grpc:grpc-bom:1.39.0
+|    |    +--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    |    +--- org.junit:junit-bom:5.7.2 -> 5.8.2
+|    |    +--- org.jetbrains.kotlin:kotlin-bom:1.6.10
+|    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1
+|    |    +--- io.ktor:ktor-bom:1.6.1
+|    |    +--- io.micrometer:micrometer-bom:1.8.3
+|    |    +--- io.micronaut.aws:micronaut-aws-bom:3.2.1
+|    |    |    \--- io.micronaut.aws:micronaut-function-aws:3.2.1 (c)
+|    |    +--- io.micronaut.azure:micronaut-azure-bom:3.2.3
+|    |    |    \--- com.azure:azure-sdk-bom:1.1.1
+|    |    +--- io.micronaut.cache:micronaut-cache-bom:3.3.0
+|    |    +--- io.micronaut.coherence:micronaut-coherence-bom:3.0.1
+|    |    +--- io.micronaut.data:micronaut-data-bom:3.3.0
+|    |    +--- io.micronaut.email:micronaut-email-bom:1.2.0
+|    |    +--- io.micronaut.flyway:micronaut-flyway-bom:5.2.0
+|    |    +--- io.micronaut.gcp:micronaut-gcp-bom:4.1.1
+|    |    +--- io.micronaut.groovy:micronaut-groovy-bom:3.1.0
+|    |    |    \--- org.codehaus.groovy:groovy-bom:3.0.10
+|    |    +--- io.micronaut.kotlin:micronaut-kotlin-bom:3.2.2
+|    |    +--- io.micronaut.kubernetes:micronaut-kubernetes-bom:3.4.0
+|    |    +--- io.micronaut.micrometer:micronaut-micrometer-bom:4.2.0
+|    |    +--- io.micronaut.mongodb:micronaut-mongo-bom:4.1.0
+|    |    +--- io.micronaut.mqtt:micronaut-mqtt-bom:2.1.0
+|    |    +--- io.micronaut.oraclecloud:micronaut-oraclecloud-bom:2.1.1
+|    |    +--- io.micronaut.problem:micronaut-problem-json-bom:2.2.2
+|    |    +--- io.micronaut.r2dbc:micronaut-r2dbc-bom:2.1.0
+|    |    |    \--- io.r2dbc:r2dbc-bom:Arabba-SR11
+|    |    +--- io.micronaut.reactor:micronaut-reactor-bom:2.2.2
+|    |    |    \--- io.projectreactor:reactor-core:3.4.15 (c)
+|    |    +--- io.micronaut.redis:micronaut-redis-bom:5.2.0
+|    |    +--- io.micronaut.rxjava2:micronaut-rxjava2-bom:1.2.1
+|    |    +--- io.micronaut.rxjava3:micronaut-rxjava3-bom:2.2.1
+|    |    +--- io.micronaut.security:micronaut-security-bom:3.5.0
+|    |    +--- io.micronaut.serde:micronaut-serde-bom:1.0.0
+|    |    +--- io.micronaut.servlet:micronaut-servlet-bom:3.2.1
+|    |    +--- io.micronaut.sql:micronaut-sql-bom:4.2.2
+|    |    |    \--- org.jdbi:jdbi3-bom:3.20.1
+|    |    +--- io.micronaut.test:micronaut-test-bom:3.1.1
+|    |    |    +--- org.junit:junit-bom:5.8.2
+|    |    |    \--- org.spockframework:spock-bom:2.0-groovy-3.0
+|    |    +--- io.micronaut.tracing:micronaut-tracing-bom:4.1.1
+|    |    +--- io.micronaut.views:micronaut-views-bom:3.2.0
+|    |    +--- io.netty:netty-bom:4.1.73.Final
+|    |    +--- com.google.protobuf:protobuf-bom:3.17.2
+|    |    +--- org.testcontainers:testcontainers-bom:1.16.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    +--- jakarta.annotation:jakarta.annotation-api:2.0.0 (c)
+|    |    +--- javax.annotation:javax.annotation-api:1.3.2 (c)
+|    |    +--- ch.qos.logback:logback-classic:1.2.10 (c)
+|    |    +--- io.micronaut.test:micronaut-test-bom:3.1.1 (c)
+|    |    +--- org.reactivestreams:reactive-streams:1.0.3 (c)
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (c)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32 (c)
+|    |    +--- org.yaml:snakeyaml:1.30 (c)
+|    |    +--- javax.validation:validation-api:2.0.1.Final (c)
+|    |    +--- io.micronaut:micronaut-aop:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-context:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-core-reactive:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-function:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-inject:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-jackson-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (c)
+|    |    \--- io.micronaut:micronaut-validation:3.4.0 (c)
+|    +--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-function:3.3.4 -> 3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-http:3.4.0 (*)
+|    \--- com.amazonaws:aws-lambda-java-core:1.2.1
++--- io.micronaut:micronaut-bom:3.4.0 (*)
++--- project :app (*)
+\--- ch.qos.logback:logback-classic -> 1.2.10
+     +--- ch.qos.logback:logback-core:1.2.10
+     \--- org.slf4j:slf4j-api:1.7.32
+
+nativeImageCompileOnly (n)
+\--- project app (n)
+
+nativeImageTestClasspath
++--- io.micronaut:micronaut-inject -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- javax.annotation:javax.annotation-api:1.3.2
+|    +--- jakarta.inject:jakarta.inject-api:2.0.1
+|    +--- jakarta.annotation:jakarta.annotation-api:2.0.0
+|    +--- io.micronaut:micronaut-core:3.4.0
+|    |    \--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    \--- org.yaml:snakeyaml:1.30
++--- io.micronaut:micronaut-jackson-databind -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-jackson-core:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    +--- io.micronaut:micronaut-context:3.4.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    +--- io.micronaut:micronaut-aop:3.4.0
+|    |    |    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    |    \--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |    |    \--- javax.validation:validation-api:2.0.1.Final
+|    |    |    \--- io.micronaut:micronaut-http:3.4.0
+|    |    |         +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15
+|    |    |         |    \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    |         +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |         +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |         \--- io.micronaut:micronaut-core-reactive:3.4.0
+|    |    |              +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |              +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |              \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2
+|    |    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    |         \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    \--- com.fasterxml.jackson.core:jackson-annotations:2.13.2
+|    |         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2
+|         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
++--- io.micronaut:micronaut-runtime -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-aop:3.4.0 (*)
+|    +--- io.micronaut:micronaut-context:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (*)
+|    +--- javax.validation:validation-api:2.0.1.Final
+|    \--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
++--- jakarta.annotation:jakarta.annotation-api -> 2.0.0
++--- com.amazonaws:aws-lambda-java-events:3.11.0
+|    \--- joda-time:joda-time:2.6
++--- io.micronaut:micronaut-validation -> 3.4.0
+|    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    \--- javax.validation:validation-api:2.0.1.Final
++--- io.micronaut.aws:micronaut-function-aws -> 3.2.1
+|    +--- io.micronaut:micronaut-bom:3.3.4 -> 3.4.0
+|    |    +--- org.codehaus.groovy:groovy-bom:3.0.9 -> 3.0.10
+|    |    +--- io.grpc:grpc-bom:1.39.0
+|    |    +--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    |    +--- org.junit:junit-bom:5.7.2 -> 5.8.2
+|    |    |    +--- org.junit.jupiter:junit-jupiter:5.8.2 (c)
+|    |    |    +--- org.junit.jupiter:junit-jupiter-api:5.8.2 (c)
+|    |    |    +--- org.junit.jupiter:junit-jupiter-engine:5.8.2 (c)
+|    |    |    +--- org.junit.platform:junit-platform-commons:1.8.2 (c)
+|    |    |    +--- org.junit.platform:junit-platform-console:1.8.2 (c)
+|    |    |    +--- org.junit.platform:junit-platform-launcher:1.8.2 (c)
+|    |    |    +--- org.junit.jupiter:junit-jupiter-params:5.8.2 (c)
+|    |    |    +--- org.junit.platform:junit-platform-engine:1.8.2 (c)
+|    |    |    \--- org.junit.platform:junit-platform-reporting:1.8.2 (c)
+|    |    +--- org.jetbrains.kotlin:kotlin-bom:1.6.10
+|    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1
+|    |    +--- io.ktor:ktor-bom:1.6.1
+|    |    +--- io.micrometer:micrometer-bom:1.8.3
+|    |    +--- io.micronaut.aws:micronaut-aws-bom:3.2.1
+|    |    |    \--- io.micronaut.aws:micronaut-function-aws:3.2.1 (c)
+|    |    +--- io.micronaut.azure:micronaut-azure-bom:3.2.3
+|    |    |    \--- com.azure:azure-sdk-bom:1.1.1
+|    |    +--- io.micronaut.cache:micronaut-cache-bom:3.3.0
+|    |    +--- io.micronaut.coherence:micronaut-coherence-bom:3.0.1
+|    |    +--- io.micronaut.data:micronaut-data-bom:3.3.0
+|    |    +--- io.micronaut.email:micronaut-email-bom:1.2.0
+|    |    +--- io.micronaut.flyway:micronaut-flyway-bom:5.2.0
+|    |    +--- io.micronaut.gcp:micronaut-gcp-bom:4.1.1
+|    |    +--- io.micronaut.groovy:micronaut-groovy-bom:3.1.0
+|    |    |    \--- org.codehaus.groovy:groovy-bom:3.0.10
+|    |    +--- io.micronaut.kotlin:micronaut-kotlin-bom:3.2.2
+|    |    +--- io.micronaut.kubernetes:micronaut-kubernetes-bom:3.4.0
+|    |    +--- io.micronaut.micrometer:micronaut-micrometer-bom:4.2.0
+|    |    +--- io.micronaut.mongodb:micronaut-mongo-bom:4.1.0
+|    |    +--- io.micronaut.mqtt:micronaut-mqtt-bom:2.1.0
+|    |    +--- io.micronaut.oraclecloud:micronaut-oraclecloud-bom:2.1.1
+|    |    +--- io.micronaut.problem:micronaut-problem-json-bom:2.2.2
+|    |    +--- io.micronaut.r2dbc:micronaut-r2dbc-bom:2.1.0
+|    |    |    \--- io.r2dbc:r2dbc-bom:Arabba-SR11
+|    |    +--- io.micronaut.reactor:micronaut-reactor-bom:2.2.2
+|    |    |    \--- io.projectreactor:reactor-core:3.4.15 (c)
+|    |    +--- io.micronaut.redis:micronaut-redis-bom:5.2.0
+|    |    +--- io.micronaut.rxjava2:micronaut-rxjava2-bom:1.2.1
+|    |    +--- io.micronaut.rxjava3:micronaut-rxjava3-bom:2.2.1
+|    |    +--- io.micronaut.security:micronaut-security-bom:3.5.0
+|    |    +--- io.micronaut.serde:micronaut-serde-bom:1.0.0
+|    |    +--- io.micronaut.servlet:micronaut-servlet-bom:3.2.1
+|    |    +--- io.micronaut.sql:micronaut-sql-bom:4.2.2
+|    |    |    \--- org.jdbi:jdbi3-bom:3.20.1
+|    |    +--- io.micronaut.test:micronaut-test-bom:3.1.1
+|    |    |    +--- org.junit:junit-bom:5.8.2 (*)
+|    |    |    +--- org.spockframework:spock-bom:2.0-groovy-3.0
+|    |    |    +--- io.micronaut.test:micronaut-test-core:3.1.1 (c)
+|    |    |    \--- io.micronaut.test:micronaut-test-junit5:3.1.1 (c)
+|    |    +--- io.micronaut.tracing:micronaut-tracing-bom:4.1.1
+|    |    +--- io.micronaut.views:micronaut-views-bom:3.2.0
+|    |    +--- io.netty:netty-bom:4.1.73.Final
+|    |    |    +--- io.netty:netty-buffer:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-codec:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-codec-http:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-codec-http2:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-codec-socks:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-common:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-handler:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-handler-proxy:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-resolver:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-transport:4.1.73.Final (c)
+|    |    |    \--- io.netty:netty-tcnative-classes:2.0.46.Final (c)
+|    |    +--- com.google.protobuf:protobuf-bom:3.17.2
+|    |    +--- org.testcontainers:testcontainers-bom:1.16.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    +--- jakarta.annotation:jakarta.annotation-api:2.0.0 (c)
+|    |    +--- javax.annotation:javax.annotation-api:1.3.2 (c)
+|    |    +--- ch.qos.logback:logback-classic:1.2.10 (c)
+|    |    +--- io.micronaut.test:micronaut-test-bom:3.1.1 (c)
+|    |    +--- io.micronaut.test:micronaut-test-core:3.1.1 (c)
+|    |    +--- io.micronaut.test:micronaut-test-junit5:3.1.1 (c)
+|    |    +--- io.netty:netty-buffer:4.1.73.Final (c)
+|    |    +--- io.netty:netty-codec-http:4.1.73.Final (c)
+|    |    +--- io.netty:netty-codec-http2:4.1.73.Final (c)
+|    |    +--- io.netty:netty-handler:4.1.73.Final (c)
+|    |    +--- io.netty:netty-handler-proxy:4.1.73.Final (c)
+|    |    +--- org.reactivestreams:reactive-streams:1.0.3 (c)
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (c)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32 (c)
+|    |    +--- org.yaml:snakeyaml:1.30 (c)
+|    |    +--- javax.validation:validation-api:2.0.1.Final (c)
+|    |    +--- io.micronaut:micronaut-aop:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-buffer-netty:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-context:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-core-reactive:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-function:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http-client:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http-client-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http-netty:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-inject:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-jackson-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-validation:3.4.0 (c)
+|    |    \--- io.micronaut:micronaut-websocket:3.4.0 (c)
+|    +--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-function:3.3.4 -> 3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-http:3.4.0 (*)
+|    \--- com.amazonaws:aws-lambda-java-core:1.2.1
++--- io.micronaut:micronaut-bom:3.4.0 (*)
++--- project :app (*)
++--- ch.qos.logback:logback-classic -> 1.2.10
+|    +--- ch.qos.logback:logback-core:1.2.10
+|    \--- org.slf4j:slf4j-api:1.7.32
++--- io.micronaut:micronaut-http-client -> 3.4.0
+|    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    +--- io.micronaut:micronaut-http-client-core:3.4.0
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    \--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    +--- io.micronaut:micronaut-websocket:3.4.0
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-http-client-core:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-aop:3.4.0 (*)
+|    +--- io.micronaut:micronaut-http-netty:3.4.0
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-websocket:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-buffer-netty:3.4.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    \--- io.netty:netty-buffer:4.1.73.Final
+|    |    |         \--- io.netty:netty-common:4.1.73.Final
+|    |    +--- io.netty:netty-codec-http:4.1.73.Final
+|    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-transport:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    |    \--- io.netty:netty-resolver:4.1.73.Final
+|    |    |    |         \--- io.netty:netty-common:4.1.73.Final
+|    |    |    +--- io.netty:netty-codec:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    |    \--- io.netty:netty-transport:4.1.73.Final (*)
+|    |    |    \--- io.netty:netty-handler:4.1.73.Final
+|    |    |         +--- io.netty:netty-common:4.1.73.Final
+|    |    |         +--- io.netty:netty-resolver:4.1.73.Final (*)
+|    |    |         +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |         +--- io.netty:netty-transport:4.1.73.Final (*)
+|    |    |         +--- io.netty:netty-codec:4.1.73.Final (*)
+|    |    |         \--- io.netty:netty-tcnative-classes:2.0.46.Final
+|    |    +--- io.netty:netty-codec-http2:4.1.73.Final
+|    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-transport:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-codec:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-handler:4.1.73.Final (*)
+|    |    |    \--- io.netty:netty-codec-http:4.1.73.Final (*)
+|    |    \--- io.netty:netty-handler:4.1.73.Final (*)
+|    \--- io.netty:netty-handler-proxy:4.1.73.Final
+|         +--- io.netty:netty-common:4.1.73.Final
+|         +--- io.netty:netty-buffer:4.1.73.Final (*)
+|         +--- io.netty:netty-transport:4.1.73.Final (*)
+|         +--- io.netty:netty-codec:4.1.73.Final (*)
+|         +--- io.netty:netty-codec-socks:4.1.73.Final
+|         |    +--- io.netty:netty-common:4.1.73.Final
+|         |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|         |    +--- io.netty:netty-transport:4.1.73.Final (*)
+|         |    \--- io.netty:netty-codec:4.1.73.Final (*)
+|         \--- io.netty:netty-codec-http:4.1.73.Final (*)
++--- org.junit.jupiter:junit-jupiter-api -> 5.8.2
+|    +--- org.junit:junit-bom:5.8.2 (*)
+|    +--- org.opentest4j:opentest4j:1.2.0
+|    \--- org.junit.platform:junit-platform-commons:1.8.2
+|         \--- org.junit:junit-bom:5.8.2 (*)
++--- io.micronaut.test:micronaut-test-junit5 -> 3.1.1
+|    +--- io.micronaut:micronaut-runtime:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-bom:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut.test:micronaut-test-core:3.1.1
+|    |    +--- io.micronaut:micronaut-runtime:3.3.4 -> 3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-bom:3.3.4 -> 3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    \--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
++--- org.graalvm.buildtools:junit-platform-native:0.9.11
+|    +--- org.junit:junit-bom:5.8.1 -> 5.8.2 (*)
+|    +--- org.junit.platform:junit-platform-console:1.8.1 -> 1.8.2
+|    |    +--- org.junit:junit-bom:5.8.2 (*)
+|    |    \--- org.junit.platform:junit-platform-reporting:1.8.2
+|    |         +--- org.junit:junit-bom:5.8.2 (*)
+|    |         \--- org.junit.platform:junit-platform-launcher:1.8.2
+|    |              +--- org.junit:junit-bom:5.8.2 (*)
+|    |              \--- org.junit.platform:junit-platform-engine:1.8.2
+|    |                   +--- org.junit:junit-bom:5.8.2 (*)
+|    |                   +--- org.opentest4j:opentest4j:1.2.0
+|    |                   \--- org.junit.platform:junit-platform-commons:1.8.2 (*)
+|    +--- org.junit.platform:junit-platform-launcher:1.8.1 -> 1.8.2 (*)
+|    \--- org.junit.jupiter:junit-jupiter -> 5.8.2
+|         +--- org.junit:junit-bom:5.8.2 (*)
+|         +--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
+|         +--- org.junit.jupiter:junit-jupiter-params:5.8.2
+|         |    +--- org.junit:junit-bom:5.8.2 (*)
+|         |    \--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
+|         \--- org.junit.jupiter:junit-jupiter-engine:5.8.2
+|              +--- org.junit:junit-bom:5.8.2 (*)
+|              +--- org.junit.platform:junit-platform-engine:1.8.2 (*)
+|              \--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
+\--- org.junit.jupiter:junit-jupiter-engine -> 5.8.2 (*)
+
+nativeImageTestCompileOnly (n)
+\--- project app (n)
+
+runtimeClasspath - Runtime classpath of source set 'main'.
++--- io.micronaut:micronaut-inject -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- javax.annotation:javax.annotation-api:1.3.2
+|    +--- jakarta.inject:jakarta.inject-api:2.0.1
+|    +--- jakarta.annotation:jakarta.annotation-api:2.0.0
+|    +--- io.micronaut:micronaut-core:3.4.0
+|    |    \--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    \--- org.yaml:snakeyaml:1.30
++--- io.micronaut:micronaut-jackson-databind -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-jackson-core:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    +--- io.micronaut:micronaut-context:3.4.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    +--- io.micronaut:micronaut-aop:3.4.0
+|    |    |    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    |    \--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |    |    \--- javax.validation:validation-api:2.0.1.Final
+|    |    |    \--- io.micronaut:micronaut-http:3.4.0
+|    |    |         +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15
+|    |    |         |    \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    |         +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |         +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |         \--- io.micronaut:micronaut-core-reactive:3.4.0
+|    |    |              +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |              +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |              \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2
+|    |    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    |         \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    \--- com.fasterxml.jackson.core:jackson-annotations:2.13.2
+|    |         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2
+|         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
++--- io.micronaut:micronaut-runtime -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-aop:3.4.0 (*)
+|    +--- io.micronaut:micronaut-context:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (*)
+|    +--- javax.validation:validation-api:2.0.1.Final
+|    \--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
++--- jakarta.annotation:jakarta.annotation-api -> 2.0.0
++--- com.amazonaws:aws-lambda-java-events:3.11.0
+|    \--- joda-time:joda-time:2.6
++--- io.micronaut:micronaut-validation -> 3.4.0
+|    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    \--- javax.validation:validation-api:2.0.1.Final
++--- io.micronaut.aws:micronaut-function-aws -> 3.2.1
+|    +--- io.micronaut:micronaut-bom:3.3.4 -> 3.4.0
+|    |    +--- org.codehaus.groovy:groovy-bom:3.0.9 -> 3.0.10
+|    |    +--- io.grpc:grpc-bom:1.39.0
+|    |    +--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    |    +--- org.junit:junit-bom:5.7.2 -> 5.8.2
+|    |    +--- org.jetbrains.kotlin:kotlin-bom:1.6.10
+|    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1
+|    |    +--- io.ktor:ktor-bom:1.6.1
+|    |    +--- io.micrometer:micrometer-bom:1.8.3
+|    |    +--- io.micronaut.aws:micronaut-aws-bom:3.2.1
+|    |    |    \--- io.micronaut.aws:micronaut-function-aws:3.2.1 (c)
+|    |    +--- io.micronaut.azure:micronaut-azure-bom:3.2.3
+|    |    |    \--- com.azure:azure-sdk-bom:1.1.1
+|    |    +--- io.micronaut.cache:micronaut-cache-bom:3.3.0
+|    |    +--- io.micronaut.coherence:micronaut-coherence-bom:3.0.1
+|    |    +--- io.micronaut.data:micronaut-data-bom:3.3.0
+|    |    +--- io.micronaut.email:micronaut-email-bom:1.2.0
+|    |    +--- io.micronaut.flyway:micronaut-flyway-bom:5.2.0
+|    |    +--- io.micronaut.gcp:micronaut-gcp-bom:4.1.1
+|    |    +--- io.micronaut.groovy:micronaut-groovy-bom:3.1.0
+|    |    |    \--- org.codehaus.groovy:groovy-bom:3.0.10
+|    |    +--- io.micronaut.kotlin:micronaut-kotlin-bom:3.2.2
+|    |    +--- io.micronaut.kubernetes:micronaut-kubernetes-bom:3.4.0
+|    |    +--- io.micronaut.micrometer:micronaut-micrometer-bom:4.2.0
+|    |    +--- io.micronaut.mongodb:micronaut-mongo-bom:4.1.0
+|    |    +--- io.micronaut.mqtt:micronaut-mqtt-bom:2.1.0
+|    |    +--- io.micronaut.oraclecloud:micronaut-oraclecloud-bom:2.1.1
+|    |    +--- io.micronaut.problem:micronaut-problem-json-bom:2.2.2
+|    |    +--- io.micronaut.r2dbc:micronaut-r2dbc-bom:2.1.0
+|    |    |    \--- io.r2dbc:r2dbc-bom:Arabba-SR11
+|    |    +--- io.micronaut.reactor:micronaut-reactor-bom:2.2.2
+|    |    |    \--- io.projectreactor:reactor-core:3.4.15 (c)
+|    |    +--- io.micronaut.redis:micronaut-redis-bom:5.2.0
+|    |    +--- io.micronaut.rxjava2:micronaut-rxjava2-bom:1.2.1
+|    |    +--- io.micronaut.rxjava3:micronaut-rxjava3-bom:2.2.1
+|    |    +--- io.micronaut.security:micronaut-security-bom:3.5.0
+|    |    +--- io.micronaut.serde:micronaut-serde-bom:1.0.0
+|    |    +--- io.micronaut.servlet:micronaut-servlet-bom:3.2.1
+|    |    +--- io.micronaut.sql:micronaut-sql-bom:4.2.2
+|    |    |    \--- org.jdbi:jdbi3-bom:3.20.1
+|    |    +--- io.micronaut.test:micronaut-test-bom:3.1.1
+|    |    |    +--- org.junit:junit-bom:5.8.2
+|    |    |    \--- org.spockframework:spock-bom:2.0-groovy-3.0
+|    |    +--- io.micronaut.tracing:micronaut-tracing-bom:4.1.1
+|    |    +--- io.micronaut.views:micronaut-views-bom:3.2.0
+|    |    +--- io.netty:netty-bom:4.1.73.Final
+|    |    +--- com.google.protobuf:protobuf-bom:3.17.2
+|    |    +--- org.testcontainers:testcontainers-bom:1.16.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    +--- jakarta.annotation:jakarta.annotation-api:2.0.0 (c)
+|    |    +--- javax.annotation:javax.annotation-api:1.3.2 (c)
+|    |    +--- ch.qos.logback:logback-classic:1.2.10 (c)
+|    |    +--- io.micronaut.test:micronaut-test-bom:3.1.1 (c)
+|    |    +--- org.reactivestreams:reactive-streams:1.0.3 (c)
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (c)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32 (c)
+|    |    +--- org.yaml:snakeyaml:1.30 (c)
+|    |    +--- javax.validation:validation-api:2.0.1.Final (c)
+|    |    +--- io.micronaut:micronaut-aop:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-context:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-core-reactive:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-function:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-inject:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-jackson-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (c)
+|    |    \--- io.micronaut:micronaut-validation:3.4.0 (c)
+|    +--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-function:3.3.4 -> 3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-http:3.4.0 (*)
+|    \--- com.amazonaws:aws-lambda-java-core:1.2.1
++--- io.micronaut:micronaut-bom:3.4.0 (*)
+\--- ch.qos.logback:logback-classic -> 1.2.10
+     +--- ch.qos.logback:logback-core:1.2.10
+     \--- org.slf4j:slf4j-api:1.7.32
+
+runtimeElements - Elements of runtime for main. (n)
+No dependencies
+
+runtimeOnly - Runtime only dependencies for source set 'main'. (n)
+\--- ch.qos.logback:logback-classic (n)
+
+shadow
+No dependencies
+
+shadowRuntimeElements (n)
+No dependencies
+
+testAnnotationProcessor - Annotation processors and their dependencies for source set 'test'.
++--- io.micronaut:micronaut-bom:3.4.0
+|    +--- org.codehaus.groovy:groovy-bom:3.0.9 -> 3.0.10
+|    +--- io.grpc:grpc-bom:1.39.0
+|    +--- com.fasterxml.jackson:jackson-bom:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    \--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    +--- org.junit:junit-bom:5.7.2 -> 5.8.2
+|    +--- org.jetbrains.kotlin:kotlin-bom:1.6.10
+|    +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1
+|    +--- io.ktor:ktor-bom:1.6.1
+|    +--- io.micrometer:micrometer-bom:1.8.3
+|    +--- io.micronaut.aws:micronaut-aws-bom:3.2.1
+|    +--- io.micronaut.azure:micronaut-azure-bom:3.2.3
+|    |    \--- com.azure:azure-sdk-bom:1.1.1
+|    +--- io.micronaut.cache:micronaut-cache-bom:3.3.0
+|    +--- io.micronaut.coherence:micronaut-coherence-bom:3.0.1
+|    +--- io.micronaut.data:micronaut-data-bom:3.3.0
+|    +--- io.micronaut.email:micronaut-email-bom:1.2.0
+|    +--- io.micronaut.flyway:micronaut-flyway-bom:5.2.0
+|    +--- io.micronaut.gcp:micronaut-gcp-bom:4.1.1
+|    +--- io.micronaut.groovy:micronaut-groovy-bom:3.1.0
+|    |    \--- org.codehaus.groovy:groovy-bom:3.0.10
+|    +--- io.micronaut.kotlin:micronaut-kotlin-bom:3.2.2
+|    +--- io.micronaut.kubernetes:micronaut-kubernetes-bom:3.4.0
+|    +--- io.micronaut.micrometer:micronaut-micrometer-bom:4.2.0
+|    +--- io.micronaut.mongodb:micronaut-mongo-bom:4.1.0
+|    +--- io.micronaut.mqtt:micronaut-mqtt-bom:2.1.0
+|    +--- io.micronaut.oraclecloud:micronaut-oraclecloud-bom:2.1.1
+|    +--- io.micronaut.problem:micronaut-problem-json-bom:2.2.2
+|    +--- io.micronaut.r2dbc:micronaut-r2dbc-bom:2.1.0
+|    |    \--- io.r2dbc:r2dbc-bom:Arabba-SR11
+|    +--- io.micronaut.reactor:micronaut-reactor-bom:2.2.2
+|    |    \--- io.projectreactor:reactor-core:3.4.15 (c)
+|    +--- io.micronaut.redis:micronaut-redis-bom:5.2.0
+|    +--- io.micronaut.rxjava2:micronaut-rxjava2-bom:1.2.1
+|    +--- io.micronaut.rxjava3:micronaut-rxjava3-bom:2.2.1
+|    +--- io.micronaut.security:micronaut-security-bom:3.5.0
+|    +--- io.micronaut.serde:micronaut-serde-bom:1.0.0
+|    +--- io.micronaut.servlet:micronaut-servlet-bom:3.2.1
+|    +--- io.micronaut.sql:micronaut-sql-bom:4.2.2
+|    |    \--- org.jdbi:jdbi3-bom:3.20.1
+|    +--- io.micronaut.test:micronaut-test-bom:3.1.1
+|    |    +--- org.junit:junit-bom:5.8.2
+|    |    \--- org.spockframework:spock-bom:2.0-groovy-3.0
+|    +--- io.micronaut.tracing:micronaut-tracing-bom:4.1.1
+|    +--- io.micronaut.views:micronaut-views-bom:3.2.0
+|    +--- io.netty:netty-bom:4.1.73.Final
+|    +--- com.google.protobuf:protobuf-bom:3.17.2
+|    +--- org.testcontainers:testcontainers-bom:1.16.2
+|    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    +--- jakarta.annotation:jakarta.annotation-api:2.0.0 (c)
+|    +--- javax.annotation:javax.annotation-api:1.3.2 (c)
+|    +--- io.micronaut.test:micronaut-test-bom:3.1.1 (c)
+|    +--- org.reactivestreams:reactive-streams:1.0.3 (c)
+|    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (c)
+|    +--- org.slf4j:slf4j-api:1.7.29 (c)
+|    +--- org.yaml:snakeyaml:1.30 (c)
+|    +--- javax.validation:validation-api:2.0.1.Final (c)
+|    +--- io.micronaut:micronaut-aop:3.4.0 (c)
+|    +--- io.micronaut:micronaut-core:3.4.0 (c)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (c)
+|    +--- io.micronaut:micronaut-graal:3.4.0 (c)
+|    +--- io.micronaut:micronaut-inject:3.4.0 (c)
+|    +--- io.micronaut:micronaut-inject-java:3.4.0 (c)
+|    \--- io.micronaut:micronaut-validation:3.4.0 (c)
++--- io.micronaut:micronaut-graal -> 3.4.0
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    \--- io.micronaut:micronaut-inject:3.4.0
+|         +--- org.slf4j:slf4j-api:1.7.29
+|         +--- javax.annotation:javax.annotation-api:1.3.2
+|         +--- jakarta.inject:jakarta.inject-api:2.0.1
+|         +--- jakarta.annotation:jakarta.annotation-api:2.0.0
+|         +--- io.micronaut:micronaut-core:3.4.0
+|         |    \--- org.slf4j:slf4j-api:1.7.29
+|         \--- org.yaml:snakeyaml:1.30
++--- io.micronaut:micronaut-inject-java -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    \--- io.micronaut:micronaut-aop:3.4.0
+|         +--- org.slf4j:slf4j-api:1.7.29
+|         +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|         \--- io.micronaut:micronaut-core:3.4.0 (*)
+\--- io.micronaut:micronaut-validation -> 3.4.0
+     +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15
+     |    \--- org.reactivestreams:reactive-streams:1.0.3
+     +--- org.slf4j:slf4j-api:1.7.29
+     +--- io.micronaut:micronaut-inject:3.4.0 (*)
+     +--- io.micronaut:micronaut-core-reactive:3.4.0
+     |    +--- org.slf4j:slf4j-api:1.7.29
+     |    +--- io.micronaut:micronaut-core:3.4.0 (*)
+     |    \--- org.reactivestreams:reactive-streams:1.0.3
+     \--- javax.validation:validation-api:2.0.1.Final
+
+testCompileClasspath - Compile classpath for source set 'test'.
++--- io.micronaut:micronaut-inject -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- javax.annotation:javax.annotation-api:1.3.2
+|    +--- jakarta.inject:jakarta.inject-api:2.0.1
+|    +--- jakarta.annotation:jakarta.annotation-api:2.0.0
+|    +--- io.micronaut:micronaut-core:3.4.0
+|    |    \--- org.slf4j:slf4j-api:1.7.29
+|    \--- org.yaml:snakeyaml:1.30
++--- io.micronaut:micronaut-jackson-databind -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-jackson-core:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    |    +--- io.micronaut:micronaut-context:3.4.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    +--- io.micronaut:micronaut-aop:3.4.0
+|    |    |    |    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    |    \--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |    |    \--- javax.validation:validation-api:2.0.1.Final
+|    |    |    \--- io.micronaut:micronaut-http:3.4.0
+|    |    |         +--- org.slf4j:slf4j-api:1.7.29
+|    |    |         +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |         \--- io.micronaut:micronaut-core-reactive:3.4.0
+|    |    |              +--- org.slf4j:slf4j-api:1.7.29
+|    |    |              +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |              \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2
+|    |    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    |         \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    \--- com.fasterxml.jackson.core:jackson-annotations:2.13.2
+|    |         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2
+|         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
++--- io.micronaut:micronaut-runtime -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-aop:3.4.0 (*)
+|    +--- io.micronaut:micronaut-context:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (*)
+|    \--- javax.validation:validation-api:2.0.1.Final
++--- jakarta.annotation:jakarta.annotation-api -> 2.0.0
++--- com.amazonaws:aws-lambda-java-events:3.11.0
+|    \--- joda-time:joda-time:2.6
++--- io.micronaut:micronaut-validation -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    \--- javax.validation:validation-api:2.0.1.Final
++--- io.micronaut.aws:micronaut-function-aws -> 3.2.1
+|    +--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-function:3.3.4 -> 3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-http:3.4.0 (*)
+|    \--- com.amazonaws:aws-lambda-java-core:1.2.1
++--- io.micronaut:micronaut-bom:3.4.0
+|    +--- org.codehaus.groovy:groovy-bom:3.0.9 -> 3.0.10
+|    +--- io.grpc:grpc-bom:1.39.0
+|    +--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- org.junit:junit-bom:5.7.2 -> 5.8.2
+|    |    +--- org.junit.jupiter:junit-jupiter-api:5.8.2 (c)
+|    |    \--- org.junit.platform:junit-platform-commons:1.8.2 (c)
+|    +--- org.jetbrains.kotlin:kotlin-bom:1.6.10
+|    +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1
+|    +--- io.ktor:ktor-bom:1.6.1
+|    +--- io.micrometer:micrometer-bom:1.8.3
+|    +--- io.micronaut.aws:micronaut-aws-bom:3.2.1
+|    |    \--- io.micronaut.aws:micronaut-function-aws:3.2.1 (c)
+|    +--- io.micronaut.azure:micronaut-azure-bom:3.2.3
+|    |    \--- com.azure:azure-sdk-bom:1.1.1
+|    +--- io.micronaut.cache:micronaut-cache-bom:3.3.0
+|    +--- io.micronaut.coherence:micronaut-coherence-bom:3.0.1
+|    +--- io.micronaut.data:micronaut-data-bom:3.3.0
+|    +--- io.micronaut.email:micronaut-email-bom:1.2.0
+|    +--- io.micronaut.flyway:micronaut-flyway-bom:5.2.0
+|    +--- io.micronaut.gcp:micronaut-gcp-bom:4.1.1
+|    +--- io.micronaut.groovy:micronaut-groovy-bom:3.1.0
+|    |    \--- org.codehaus.groovy:groovy-bom:3.0.10
+|    +--- io.micronaut.kotlin:micronaut-kotlin-bom:3.2.2
+|    +--- io.micronaut.kubernetes:micronaut-kubernetes-bom:3.4.0
+|    +--- io.micronaut.micrometer:micronaut-micrometer-bom:4.2.0
+|    +--- io.micronaut.mongodb:micronaut-mongo-bom:4.1.0
+|    +--- io.micronaut.mqtt:micronaut-mqtt-bom:2.1.0
+|    +--- io.micronaut.oraclecloud:micronaut-oraclecloud-bom:2.1.1
+|    +--- io.micronaut.problem:micronaut-problem-json-bom:2.2.2
+|    +--- io.micronaut.r2dbc:micronaut-r2dbc-bom:2.1.0
+|    |    \--- io.r2dbc:r2dbc-bom:Arabba-SR11
+|    +--- io.micronaut.reactor:micronaut-reactor-bom:2.2.2
+|    +--- io.micronaut.redis:micronaut-redis-bom:5.2.0
+|    +--- io.micronaut.rxjava2:micronaut-rxjava2-bom:1.2.1
+|    +--- io.micronaut.rxjava3:micronaut-rxjava3-bom:2.2.1
+|    +--- io.micronaut.security:micronaut-security-bom:3.5.0
+|    +--- io.micronaut.serde:micronaut-serde-bom:1.0.0
+|    +--- io.micronaut.servlet:micronaut-servlet-bom:3.2.1
+|    +--- io.micronaut.sql:micronaut-sql-bom:4.2.2
+|    |    \--- org.jdbi:jdbi3-bom:3.20.1
+|    +--- io.micronaut.test:micronaut-test-bom:3.1.1
+|    |    +--- org.junit:junit-bom:5.8.2 (*)
+|    |    +--- org.spockframework:spock-bom:2.0-groovy-3.0
+|    |    +--- io.micronaut.test:micronaut-test-core:3.1.1 (c)
+|    |    \--- io.micronaut.test:micronaut-test-junit5:3.1.1 (c)
+|    +--- io.micronaut.tracing:micronaut-tracing-bom:4.1.1
+|    +--- io.micronaut.views:micronaut-views-bom:3.2.0
+|    +--- io.netty:netty-bom:4.1.73.Final
+|    |    +--- io.netty:netty-buffer:4.1.73.Final (c)
+|    |    +--- io.netty:netty-codec:4.1.73.Final (c)
+|    |    +--- io.netty:netty-codec-http:4.1.73.Final (c)
+|    |    +--- io.netty:netty-codec-http2:4.1.73.Final (c)
+|    |    +--- io.netty:netty-codec-socks:4.1.73.Final (c)
+|    |    +--- io.netty:netty-common:4.1.73.Final (c)
+|    |    +--- io.netty:netty-handler:4.1.73.Final (c)
+|    |    +--- io.netty:netty-handler-proxy:4.1.73.Final (c)
+|    |    +--- io.netty:netty-resolver:4.1.73.Final (c)
+|    |    +--- io.netty:netty-transport:4.1.73.Final (c)
+|    |    \--- io.netty:netty-tcnative-classes:2.0.46.Final (c)
+|    +--- com.google.protobuf:protobuf-bom:3.17.2
+|    +--- org.testcontainers:testcontainers-bom:1.16.2
+|    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    +--- jakarta.annotation:jakarta.annotation-api:2.0.0 (c)
+|    +--- javax.annotation:javax.annotation-api:1.3.2 (c)
+|    +--- io.micronaut.test:micronaut-test-bom:3.1.1 (c)
+|    +--- io.micronaut.test:micronaut-test-core:3.1.1 (c)
+|    +--- io.micronaut.test:micronaut-test-junit5:3.1.1 (c)
+|    +--- io.netty:netty-buffer:4.1.73.Final (c)
+|    +--- io.netty:netty-codec-http:4.1.73.Final (c)
+|    +--- io.netty:netty-codec-http2:4.1.73.Final (c)
+|    +--- io.netty:netty-handler:4.1.73.Final (c)
+|    +--- io.netty:netty-handler-proxy:4.1.73.Final (c)
+|    +--- org.reactivestreams:reactive-streams:1.0.3 (c)
+|    +--- org.slf4j:slf4j-api:1.7.29 (c)
+|    +--- org.yaml:snakeyaml:1.30 (c)
+|    +--- javax.validation:validation-api:2.0.1.Final (c)
+|    +--- io.micronaut:micronaut-aop:3.4.0 (c)
+|    +--- io.micronaut:micronaut-buffer-netty:3.4.0 (c)
+|    +--- io.micronaut:micronaut-context:3.4.0 (c)
+|    +--- io.micronaut:micronaut-core:3.4.0 (c)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (c)
+|    +--- io.micronaut:micronaut-function:3.4.0 (c)
+|    +--- io.micronaut:micronaut-http:3.4.0 (c)
+|    +--- io.micronaut:micronaut-http-client:3.4.0 (c)
+|    +--- io.micronaut:micronaut-http-client-core:3.4.0 (c)
+|    +--- io.micronaut:micronaut-http-netty:3.4.0 (c)
+|    +--- io.micronaut:micronaut-inject:3.4.0 (c)
+|    +--- io.micronaut:micronaut-jackson-core:3.4.0 (c)
+|    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (c)
+|    +--- io.micronaut:micronaut-json-core:3.4.0 (c)
+|    +--- io.micronaut:micronaut-runtime:3.4.0 (c)
+|    +--- io.micronaut:micronaut-validation:3.4.0 (c)
+|    \--- io.micronaut:micronaut-websocket:3.4.0 (c)
++--- io.micronaut:micronaut-http-client -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29
+|    +--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    +--- io.micronaut:micronaut-http-client-core:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    \--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    +--- io.micronaut:micronaut-websocket:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-http-client-core:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-aop:3.4.0 (*)
+|    +--- io.micronaut:micronaut-http-netty:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-websocket:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-buffer-netty:3.4.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.29
+|    |    |    +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    \--- io.netty:netty-buffer:4.1.73.Final
+|    |    |         \--- io.netty:netty-common:4.1.73.Final
+|    |    +--- io.netty:netty-codec-http:4.1.73.Final
+|    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-transport:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    |    \--- io.netty:netty-resolver:4.1.73.Final
+|    |    |    |         \--- io.netty:netty-common:4.1.73.Final
+|    |    |    +--- io.netty:netty-codec:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    |    \--- io.netty:netty-transport:4.1.73.Final (*)
+|    |    |    \--- io.netty:netty-handler:4.1.73.Final
+|    |    |         +--- io.netty:netty-common:4.1.73.Final
+|    |    |         +--- io.netty:netty-resolver:4.1.73.Final (*)
+|    |    |         +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |         +--- io.netty:netty-transport:4.1.73.Final (*)
+|    |    |         +--- io.netty:netty-codec:4.1.73.Final (*)
+|    |    |         \--- io.netty:netty-tcnative-classes:2.0.46.Final
+|    |    +--- io.netty:netty-codec-http2:4.1.73.Final
+|    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-transport:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-codec:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-handler:4.1.73.Final (*)
+|    |    |    \--- io.netty:netty-codec-http:4.1.73.Final (*)
+|    |    \--- io.netty:netty-handler:4.1.73.Final (*)
+|    \--- io.netty:netty-handler-proxy:4.1.73.Final
+|         +--- io.netty:netty-common:4.1.73.Final
+|         +--- io.netty:netty-buffer:4.1.73.Final (*)
+|         +--- io.netty:netty-transport:4.1.73.Final (*)
+|         +--- io.netty:netty-codec:4.1.73.Final (*)
+|         +--- io.netty:netty-codec-socks:4.1.73.Final
+|         |    +--- io.netty:netty-common:4.1.73.Final
+|         |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|         |    +--- io.netty:netty-transport:4.1.73.Final (*)
+|         |    \--- io.netty:netty-codec:4.1.73.Final (*)
+|         \--- io.netty:netty-codec-http:4.1.73.Final (*)
++--- org.junit.jupiter:junit-jupiter-api -> 5.8.2
+|    +--- org.junit:junit-bom:5.8.2 (*)
+|    +--- org.opentest4j:opentest4j:1.2.0
+|    +--- org.junit.platform:junit-platform-commons:1.8.2
+|    |    +--- org.junit:junit-bom:5.8.2 (*)
+|    |    \--- org.apiguardian:apiguardian-api:1.1.2
+|    \--- org.apiguardian:apiguardian-api:1.1.2
++--- io.micronaut.test:micronaut-test-junit5 -> 3.1.1
+|    +--- io.micronaut.test:micronaut-test-core:3.1.1
+|    |    \--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    \--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
+\--- org.graalvm.buildtools:junit-platform-native:0.9.11
+
+testCompileOnly - Compile only dependencies for source set 'test'. (n)
+No dependencies
+
+testImplementation - Implementation only dependencies for source set 'test'. (n)
++--- io.micronaut:micronaut-http-client (n)
++--- io.micronaut:micronaut-inject (n)
++--- org.junit.jupiter:junit-jupiter-api (n)
++--- io.micronaut.test:micronaut-test-junit5 (n)
+\--- org.graalvm.buildtools:junit-platform-native:0.9.11 (n)
+
+testResultsElementsForTest - Directory containing binary results of running tests for the test Test Suite's test target. (n)
+No dependencies
+
+testRuntimeClasspath - Runtime classpath of source set 'test'.
++--- io.micronaut:micronaut-inject -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- javax.annotation:javax.annotation-api:1.3.2
+|    +--- jakarta.inject:jakarta.inject-api:2.0.1
+|    +--- jakarta.annotation:jakarta.annotation-api:2.0.0
+|    +--- io.micronaut:micronaut-core:3.4.0
+|    |    \--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    \--- org.yaml:snakeyaml:1.30
++--- io.micronaut:micronaut-jackson-databind -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-jackson-core:3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    +--- io.micronaut:micronaut-context:3.4.0
+|    |    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    +--- io.micronaut:micronaut-aop:3.4.0
+|    |    |    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    |    |    \--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |    |    \--- javax.validation:validation-api:2.0.1.Final
+|    |    |    \--- io.micronaut:micronaut-http:3.4.0
+|    |    |         +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15
+|    |    |         |    \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    |         +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |         +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |         \--- io.micronaut:micronaut-core-reactive:3.4.0
+|    |    |              +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |              +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |              \--- org.reactivestreams:reactive-streams:1.0.3
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2
+|    |    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    |         +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    |         \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    \--- com.fasterxml.jackson.core:jackson-annotations:2.13.2
+|    |         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    \--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2
+|         +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (*)
+|         +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (*)
+|         \--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
++--- io.micronaut:micronaut-runtime -> 3.4.0
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-aop:3.4.0 (*)
+|    +--- io.micronaut:micronaut-context:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (*)
+|    +--- javax.validation:validation-api:2.0.1.Final
+|    \--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
++--- jakarta.annotation:jakarta.annotation-api -> 2.0.0
++--- com.amazonaws:aws-lambda-java-events:3.11.0
+|    \--- joda-time:joda-time:2.6
++--- io.micronaut:micronaut-validation -> 3.4.0
+|    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    +--- io.micronaut:micronaut-core-reactive:3.4.0 (*)
+|    \--- javax.validation:validation-api:2.0.1.Final
++--- io.micronaut.aws:micronaut-function-aws -> 3.2.1
+|    +--- io.micronaut:micronaut-bom:3.3.4 -> 3.4.0
+|    |    +--- org.codehaus.groovy:groovy-bom:3.0.9 -> 3.0.10
+|    |    +--- io.grpc:grpc-bom:1.39.0
+|    |    +--- com.fasterxml.jackson:jackson-bom:2.13.2 (*)
+|    |    +--- org.junit:junit-bom:5.7.2 -> 5.8.2
+|    |    |    +--- org.junit.jupiter:junit-jupiter:5.8.2 (c)
+|    |    |    +--- org.junit.jupiter:junit-jupiter-api:5.8.2 (c)
+|    |    |    +--- org.junit.jupiter:junit-jupiter-engine:5.8.2 (c)
+|    |    |    +--- org.junit.platform:junit-platform-commons:1.8.2 (c)
+|    |    |    +--- org.junit.platform:junit-platform-console:1.8.2 (c)
+|    |    |    +--- org.junit.platform:junit-platform-launcher:1.8.2 (c)
+|    |    |    +--- org.junit.jupiter:junit-jupiter-params:5.8.2 (c)
+|    |    |    +--- org.junit.platform:junit-platform-engine:1.8.2 (c)
+|    |    |    \--- org.junit.platform:junit-platform-reporting:1.8.2 (c)
+|    |    +--- org.jetbrains.kotlin:kotlin-bom:1.6.10
+|    |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.5.1
+|    |    +--- io.ktor:ktor-bom:1.6.1
+|    |    +--- io.micrometer:micrometer-bom:1.8.3
+|    |    +--- io.micronaut.aws:micronaut-aws-bom:3.2.1
+|    |    |    \--- io.micronaut.aws:micronaut-function-aws:3.2.1 (c)
+|    |    +--- io.micronaut.azure:micronaut-azure-bom:3.2.3
+|    |    |    \--- com.azure:azure-sdk-bom:1.1.1
+|    |    +--- io.micronaut.cache:micronaut-cache-bom:3.3.0
+|    |    +--- io.micronaut.coherence:micronaut-coherence-bom:3.0.1
+|    |    +--- io.micronaut.data:micronaut-data-bom:3.3.0
+|    |    +--- io.micronaut.email:micronaut-email-bom:1.2.0
+|    |    +--- io.micronaut.flyway:micronaut-flyway-bom:5.2.0
+|    |    +--- io.micronaut.gcp:micronaut-gcp-bom:4.1.1
+|    |    +--- io.micronaut.groovy:micronaut-groovy-bom:3.1.0
+|    |    |    \--- org.codehaus.groovy:groovy-bom:3.0.10
+|    |    +--- io.micronaut.kotlin:micronaut-kotlin-bom:3.2.2
+|    |    +--- io.micronaut.kubernetes:micronaut-kubernetes-bom:3.4.0
+|    |    +--- io.micronaut.micrometer:micronaut-micrometer-bom:4.2.0
+|    |    +--- io.micronaut.mongodb:micronaut-mongo-bom:4.1.0
+|    |    +--- io.micronaut.mqtt:micronaut-mqtt-bom:2.1.0
+|    |    +--- io.micronaut.oraclecloud:micronaut-oraclecloud-bom:2.1.1
+|    |    +--- io.micronaut.problem:micronaut-problem-json-bom:2.2.2
+|    |    +--- io.micronaut.r2dbc:micronaut-r2dbc-bom:2.1.0
+|    |    |    \--- io.r2dbc:r2dbc-bom:Arabba-SR11
+|    |    +--- io.micronaut.reactor:micronaut-reactor-bom:2.2.2
+|    |    |    \--- io.projectreactor:reactor-core:3.4.15 (c)
+|    |    +--- io.micronaut.redis:micronaut-redis-bom:5.2.0
+|    |    +--- io.micronaut.rxjava2:micronaut-rxjava2-bom:1.2.1
+|    |    +--- io.micronaut.rxjava3:micronaut-rxjava3-bom:2.2.1
+|    |    +--- io.micronaut.security:micronaut-security-bom:3.5.0
+|    |    +--- io.micronaut.serde:micronaut-serde-bom:1.0.0
+|    |    +--- io.micronaut.servlet:micronaut-servlet-bom:3.2.1
+|    |    +--- io.micronaut.sql:micronaut-sql-bom:4.2.2
+|    |    |    \--- org.jdbi:jdbi3-bom:3.20.1
+|    |    +--- io.micronaut.test:micronaut-test-bom:3.1.1
+|    |    |    +--- org.junit:junit-bom:5.8.2 (*)
+|    |    |    +--- org.spockframework:spock-bom:2.0-groovy-3.0
+|    |    |    +--- io.micronaut.test:micronaut-test-core:3.1.1 (c)
+|    |    |    \--- io.micronaut.test:micronaut-test-junit5:3.1.1 (c)
+|    |    +--- io.micronaut.tracing:micronaut-tracing-bom:4.1.1
+|    |    +--- io.micronaut.views:micronaut-views-bom:3.2.0
+|    |    +--- io.netty:netty-bom:4.1.73.Final
+|    |    |    +--- io.netty:netty-buffer:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-codec:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-codec-http:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-codec-http2:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-codec-socks:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-common:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-handler:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-handler-proxy:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-resolver:4.1.73.Final (c)
+|    |    |    +--- io.netty:netty-transport:4.1.73.Final (c)
+|    |    |    \--- io.netty:netty-tcnative-classes:2.0.46.Final (c)
+|    |    +--- com.google.protobuf:protobuf-bom:3.17.2
+|    |    +--- org.testcontainers:testcontainers-bom:1.16.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.core:jackson-databind:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2 (c)
+|    |    +--- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2 (c)
+|    |    +--- jakarta.annotation:jakarta.annotation-api:2.0.0 (c)
+|    |    +--- javax.annotation:javax.annotation-api:1.3.2 (c)
+|    |    +--- ch.qos.logback:logback-classic:1.2.10 (c)
+|    |    +--- io.micronaut.test:micronaut-test-bom:3.1.1 (c)
+|    |    +--- io.micronaut.test:micronaut-test-core:3.1.1 (c)
+|    |    +--- io.micronaut.test:micronaut-test-junit5:3.1.1 (c)
+|    |    +--- io.netty:netty-buffer:4.1.73.Final (c)
+|    |    +--- io.netty:netty-codec-http:4.1.73.Final (c)
+|    |    +--- io.netty:netty-codec-http2:4.1.73.Final (c)
+|    |    +--- io.netty:netty-handler:4.1.73.Final (c)
+|    |    +--- io.netty:netty-handler-proxy:4.1.73.Final (c)
+|    |    +--- org.reactivestreams:reactive-streams:1.0.3 (c)
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (c)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32 (c)
+|    |    +--- org.yaml:snakeyaml:1.30 (c)
+|    |    +--- javax.validation:validation-api:2.0.1.Final (c)
+|    |    +--- io.micronaut:micronaut-aop:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-buffer-netty:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-context:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-core-reactive:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-function:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http-client:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http-client-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-http-netty:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-inject:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-jackson-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-jackson-databind:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-json-core:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (c)
+|    |    +--- io.micronaut:micronaut-validation:3.4.0 (c)
+|    |    \--- io.micronaut:micronaut-websocket:3.4.0 (c)
+|    +--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-function:3.3.4 -> 3.4.0
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-http:3.4.0 (*)
+|    \--- com.amazonaws:aws-lambda-java-core:1.2.1
++--- io.micronaut:micronaut-bom:3.4.0 (*)
++--- ch.qos.logback:logback-classic -> 1.2.10
+|    +--- ch.qos.logback:logback-core:1.2.10
+|    \--- org.slf4j:slf4j-api:1.7.32
++--- io.micronaut:micronaut-http-client -> 3.4.0
+|    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    +--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    +--- io.micronaut:micronaut-http-client-core:3.4.0
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    \--- io.micronaut:micronaut-runtime:3.4.0 (*)
+|    +--- io.micronaut:micronaut-websocket:3.4.0
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-http-client-core:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-aop:3.4.0 (*)
+|    +--- io.micronaut:micronaut-http-netty:3.4.0
+|    |    +--- io.projectreactor:reactor-core:3.4.14 -> 3.4.15 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    +--- io.micronaut:micronaut-http:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-websocket:3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-buffer-netty:3.4.0
+|    |    |    +--- org.slf4j:slf4j-api:1.7.29 -> 1.7.32
+|    |    |    +--- io.micronaut:micronaut-core:3.4.0 (*)
+|    |    |    +--- io.micronaut:micronaut-inject:3.4.0 (*)
+|    |    |    \--- io.netty:netty-buffer:4.1.73.Final
+|    |    |         \--- io.netty:netty-common:4.1.73.Final
+|    |    +--- io.netty:netty-codec-http:4.1.73.Final
+|    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-transport:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    |    \--- io.netty:netty-resolver:4.1.73.Final
+|    |    |    |         \--- io.netty:netty-common:4.1.73.Final
+|    |    |    +--- io.netty:netty-codec:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    |    \--- io.netty:netty-transport:4.1.73.Final (*)
+|    |    |    \--- io.netty:netty-handler:4.1.73.Final
+|    |    |         +--- io.netty:netty-common:4.1.73.Final
+|    |    |         +--- io.netty:netty-resolver:4.1.73.Final (*)
+|    |    |         +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |         +--- io.netty:netty-transport:4.1.73.Final (*)
+|    |    |         +--- io.netty:netty-codec:4.1.73.Final (*)
+|    |    |         \--- io.netty:netty-tcnative-classes:2.0.46.Final
+|    |    +--- io.netty:netty-codec-http2:4.1.73.Final
+|    |    |    +--- io.netty:netty-common:4.1.73.Final
+|    |    |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-transport:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-codec:4.1.73.Final (*)
+|    |    |    +--- io.netty:netty-handler:4.1.73.Final (*)
+|    |    |    \--- io.netty:netty-codec-http:4.1.73.Final (*)
+|    |    \--- io.netty:netty-handler:4.1.73.Final (*)
+|    \--- io.netty:netty-handler-proxy:4.1.73.Final
+|         +--- io.netty:netty-common:4.1.73.Final
+|         +--- io.netty:netty-buffer:4.1.73.Final (*)
+|         +--- io.netty:netty-transport:4.1.73.Final (*)
+|         +--- io.netty:netty-codec:4.1.73.Final (*)
+|         +--- io.netty:netty-codec-socks:4.1.73.Final
+|         |    +--- io.netty:netty-common:4.1.73.Final
+|         |    +--- io.netty:netty-buffer:4.1.73.Final (*)
+|         |    +--- io.netty:netty-transport:4.1.73.Final (*)
+|         |    \--- io.netty:netty-codec:4.1.73.Final (*)
+|         \--- io.netty:netty-codec-http:4.1.73.Final (*)
++--- org.junit.jupiter:junit-jupiter-api -> 5.8.2
+|    +--- org.junit:junit-bom:5.8.2 (*)
+|    +--- org.opentest4j:opentest4j:1.2.0
+|    \--- org.junit.platform:junit-platform-commons:1.8.2
+|         \--- org.junit:junit-bom:5.8.2 (*)
++--- io.micronaut.test:micronaut-test-junit5 -> 3.1.1
+|    +--- io.micronaut:micronaut-runtime:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-bom:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut.test:micronaut-test-core:3.1.1
+|    |    +--- io.micronaut:micronaut-runtime:3.3.4 -> 3.4.0 (*)
+|    |    +--- io.micronaut:micronaut-bom:3.3.4 -> 3.4.0 (*)
+|    |    \--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    +--- io.micronaut:micronaut-inject:3.3.4 -> 3.4.0 (*)
+|    \--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
++--- org.graalvm.buildtools:junit-platform-native:0.9.11
+|    +--- org.junit:junit-bom:5.8.1 -> 5.8.2 (*)
+|    +--- org.junit.platform:junit-platform-console:1.8.1 -> 1.8.2
+|    |    +--- org.junit:junit-bom:5.8.2 (*)
+|    |    \--- org.junit.platform:junit-platform-reporting:1.8.2
+|    |         +--- org.junit:junit-bom:5.8.2 (*)
+|    |         \--- org.junit.platform:junit-platform-launcher:1.8.2
+|    |              +--- org.junit:junit-bom:5.8.2 (*)
+|    |              \--- org.junit.platform:junit-platform-engine:1.8.2
+|    |                   +--- org.junit:junit-bom:5.8.2 (*)
+|    |                   +--- org.opentest4j:opentest4j:1.2.0
+|    |                   \--- org.junit.platform:junit-platform-commons:1.8.2 (*)
+|    +--- org.junit.platform:junit-platform-launcher:1.8.1 -> 1.8.2 (*)
+|    \--- org.junit.jupiter:junit-jupiter -> 5.8.2
+|         +--- org.junit:junit-bom:5.8.2 (*)
+|         +--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
+|         +--- org.junit.jupiter:junit-jupiter-params:5.8.2
+|         |    +--- org.junit:junit-bom:5.8.2 (*)
+|         |    \--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
+|         \--- org.junit.jupiter:junit-jupiter-engine:5.8.2
+|              +--- org.junit:junit-bom:5.8.2 (*)
+|              +--- org.junit.platform:junit-platform-engine:1.8.2 (*)
+|              \--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
+\--- org.junit.jupiter:junit-jupiter-engine -> 5.8.2 (*)
+
+testRuntimeOnly - Runtime only dependencies for source set 'test'. (n)
+\--- org.junit.jupiter:junit-jupiter-engine (n)
+
+(c) - dependency constraint
+(*) - dependencies omitted (listed previously)
+
+(n) - Not resolved (configuration is not meant to be resolved)
+
+A web-based, searchable dependency report is available by adding the --scan option.
+
+BUILD SUCCESSFUL in 984ms
+1 actionable task: 1 executed
