@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.core.AotUtils;
 import com.example.core.ApplicationTypeProvider;
 import com.example.core.RuntimeProvider;
 import io.micronaut.http.HttpRequest;
@@ -18,14 +19,12 @@ public class HomeController {
         this.applicationTypeProvider = applicationTypeProvider;
     }
 
-
-
     @Produces(MediaType.TEXT_PLAIN)
     @Get
     String index(HttpRequest<?> request) {
-        return "App Type: " + applicationTypeProvider.getApplicationType()
+        return "AOT : " + (AotUtils.runningAot("com.example", this.getClass().getClassLoader()) ? "YES": "NO") +
+                " App Type: " + applicationTypeProvider.getApplicationType()
                 + runtimeProvider.runtime().map(runtime -> " Runtime: " + runtime).orElse("") +
                 ". Hello CDK with Micronaut!, You have hit " + request.getPath();
     }
-
 }

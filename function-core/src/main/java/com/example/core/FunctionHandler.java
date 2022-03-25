@@ -21,7 +21,8 @@ public class FunctionHandler extends MicronautRequestHandler<APIGatewayProxyRequ
         APIGatewayProxyResponseEvent responseEvent = new APIGatewayProxyResponseEvent();
         responseEvent.setStatusCode(200);
         responseEvent.setHeaders(Collections.singletonMap("Content-Type", "text/plain"));
-        String body = "App Type: " + applicationTypeProvider.getApplicationType()
+        String body = "AOT : " + (AotUtils.runningAot("com.example", this.getClass().getClassLoader()) ? "YES": "NO") +
+                " App Type: " + applicationTypeProvider.getApplicationType()
                 + runtimeProvider.runtime().map(runtime -> " Runtime: " + runtime).orElse("") +
                 ". Hello CDK with Micronaut!, You have hit " + request.getPath();
 
