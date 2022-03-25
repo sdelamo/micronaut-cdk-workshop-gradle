@@ -33,6 +33,14 @@ micronaut {
         annotations("com.example.*")
     }
 }
+graalvmNative {
+    binaries {
+        main {
+            mainClass.set("com.example.FunctionLambdaRuntime")
+        }
+    }
+}
+
 tasks.named("dockerfileNative") {
     args(
             '-Xmx512m',
