@@ -101,7 +101,7 @@ public class AppStack extends Stack {
     }
 
     static String providedZipPath(String moduleName) {
-        return providedZipPath(moduleName, true, VERSION_ZERO_ONE);
+        return providedZipPath(moduleName, false, VERSION_ZERO_ONE);
     }
 
     private static Function.Builder createFunctionBuilder(Construct scope,
