@@ -1,6 +1,7 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("io.micronaut.application") version "3.3.1"
+    id("io.micronaut.aot") version "3.3.1"
 }
 version = "0.1"
 group = "com.example"
@@ -32,15 +33,16 @@ micronaut {
         incremental(true)
         annotations("com.example.*")
     }
-}
-graalvmNative {
-    binaries {
-        main {
-            mainClass.set("com.example.FunctionLambdaRuntime")
-        }
+    aot {
+        version = '1.0.0'
+        optimizeServiceLoading = true
+        convertYamlToJava = true
+        precomputeOperations = true
+        cacheEnvironment = true
+        optimizeClassLoading = true
+        deduceEnvironment = true
     }
 }
-
 tasks.named("dockerfileNative") {
     args(
             '-Xmx512m',
