@@ -7,6 +7,7 @@ import io.micronaut.function.aws.runtime.AbstractMicronautLambdaRuntime;
 import java.net.MalformedURLException;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import io.micronaut.core.annotation.Nullable;
+import io.micronaut.logging.LogLevel;
 
 public class FunctionLambdaRuntime extends AbstractMicronautLambdaRuntime<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent, APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
@@ -17,6 +18,11 @@ public class FunctionLambdaRuntime extends AbstractMicronautLambdaRuntime<APIGat
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected LogLevel getLogLevel() {
+        return LogLevel.DEBUG;
     }
 
     @Override

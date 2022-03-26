@@ -1,5 +1,6 @@
 package com.example;
 
+import software.amazon.awscdk.CfnOutput;
 import software.amazon.awscdk.Duration;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
@@ -7,6 +8,7 @@ import software.amazon.awscdk.services.apigateway.LambdaRestApi;
 import software.amazon.awscdk.services.lambda.Architecture;
 import software.amazon.awscdk.services.lambda.Code;
 import software.amazon.awscdk.services.lambda.Function;
+import software.amazon.awscdk.services.lambda.IFunction;
 import software.amazon.awscdk.services.lambda.Runtime;
 import software.amazon.awscdk.services.lambda.Tracing;
 import software.constructs.Construct;
@@ -18,12 +20,22 @@ public class AppStack extends Stack {
 
     private static final String OPTIMIZED = "optimized";
     public static final String ENVIRONMENT_TEST_SUITE = "TEST_SUITE";
+    private static final String JAR = "jar";
+    private static final String ALL = "all";
+    private static final String DASH = "-";
+    private static final String BUILD = "build";
+    private static final String LIBS = "libs";
+    private static final String DOTDOT = "..";
+    private static final String SLASH = "/";
+    private static final String LAMBDA = "lambda";
+    private static final String ZIP = "zip";
+    private static final String DOT = ".";
 
+    private static final String PROXY_HANDLER = "io.micronaut.function.aws.proxy.MicronautLambdaHandler";
+    private static final String FUNCTION_HANDLER = "com.example.core.FunctionHandler";
+    private static final String VERSION_ZERO_ONE = "0.1";
+    public static final String COMMA = ",";
 
-    public static final String FUNCTION_HANDLER = "com.example.core.FunctionHandler";
-    public static final String PROXY_HANDLER = "io.micronaut.function.aws.proxy.MicronautLambdaHandler";
-    public static final String LAMBDA_ZIP = "-lambda.zip";
-    public static final String VERSION_ZERO_ONE = "0.1";
 
     public AppStack(final Construct parent, final String id) {
         this(parent, id, null);
@@ -32,18 +44,18 @@ public class AppStack extends Stack {
     public AppStack(final Construct parent, final String id, final StackProps props) {
         super(parent, id, props);
 
-        Function selectedFunction = createFunction(this);
-        LambdaRestApi.Builder.create(this, "Endpoint")
-                .handler(selectedFunction)
+        LambdaRestApi lambdaRestApi = createLambdaRestApi(this, "Endpoint", createFunction(this));
+        CfnOutput apiUrl = CfnOutput.Builder.create(this, "ApiUrl")
+                .exportName("ApiUrl")
+                .value(lambdaRestApi.getUrl())
                 .build();
+
     }
 
-    private static String candidates() {
-        List<String> candidates = new ArrayList<>();
-        for (Scenario it : Scenario.values()) {
-            candidates.add(it.name());
-        }
-        return String.join(",", candidates);
+    private static LambdaRestApi createLambdaRestApi(Construct scope, String id, IFunction handler) {
+        return LambdaRestApi.Builder.create(scope, id)
+                .handler(handler)
+                .build();
     }
 
     private static Function createFunction(Construct scope) throws IllegalArgumentException {
@@ -64,43 +76,39 @@ public class AppStack extends Stack {
             case GRADLE_FUNCTION_AOT:
                 return createFunctionJava(scope, Scenario.GRADLE_FUNCTION_AOT.name(), jarPath("function", true), FUNCTION_HANDLER);
             case GRADLE_FUNCTION_NATIVE:
-                return  createFunctionJava(scope, Scenario.GRADLE_FUNCTION_NATIVE.name(), providedZipPath("function-native"), FUNCTION_HANDLER);
+                return  createFunctionProvided(scope, Scenario.GRADLE_FUNCTION_NATIVE.name(), providedZipPath("function-native"), FUNCTION_HANDLER);
             case GRADLE_FUNCTION_NATIVE_AOT:
-                return createFunctionJava(scope, Scenario.GRADLE_FUNCTION_NATIVE_AOT.name(), providedZipPath("function-native", true), FUNCTION_HANDLER);
+                return createFunctionProvided(scope, Scenario.GRADLE_FUNCTION_NATIVE_AOT.name(), providedZipPath("function-native", true), FUNCTION_HANDLER);
             default:
                 throw exceptionSupplier.get();
         }
     }
 
-    static String jarPath(String moduleName, boolean optimized, String version) {
-        String path = "../" + moduleName + "/build/libs/" + moduleName + "-" + version +"-all.jar";
-        if (optimized) {
-            path = path.replaceAll("-all.jar", "-all-"+ OPTIMIZED + ".jar");
-        }
-        return path;
+    private static String jarPath(String moduleName, boolean optimized, String version) {
+        return String.join(SLASH, DOTDOT, moduleName, BUILD, LIBS, optimized ?
+                String.join(DOT, String.join(DASH, moduleName, version, ALL, OPTIMIZED), JAR) :
+                String.join(DOT, String.join(DASH, moduleName, version, ALL), JAR));
     }
 
-    static String jarPath(String moduleName, boolean optimized) {
+    private static String jarPath(String moduleName, boolean optimized) {
         return jarPath(moduleName, optimized, VERSION_ZERO_ONE);
     }
 
-    static String jarPath(String moduleName) {
+    private static String jarPath(String moduleName) {
         return jarPath(moduleName, false, VERSION_ZERO_ONE);
     }
 
-    static String providedZipPath(String moduleName, boolean optimized, String version) {
-        String path = "../" + moduleName + "/build/libs/" + moduleName + "-" + version + LAMBDA_ZIP;
-        if (optimized) {
-            path = path.replace(LAMBDA_ZIP, "-" + OPTIMIZED + LAMBDA_ZIP);
-        }
-        return path;
+    private static String providedZipPath(String moduleName, boolean optimized, String version) {
+        return String.join(SLASH, DOTDOT, moduleName, BUILD, LIBS, optimized ?
+                String.join(DOT, String.join(DASH, moduleName, version, OPTIMIZED, LAMBDA), ZIP) :
+                String.join(DOT, String.join(DASH, moduleName, version, LAMBDA), ZIP));
     }
 
-    static String providedZipPath(String moduleName, boolean optimized) {
+    private static String providedZipPath(String moduleName, boolean optimized) {
         return providedZipPath(moduleName, optimized, VERSION_ZERO_ONE);
     }
 
-    static String providedZipPath(String moduleName) {
+    private static String providedZipPath(String moduleName) {
         return providedZipPath(moduleName, false, VERSION_ZERO_ONE);
     }
 
@@ -133,5 +141,13 @@ public class AppStack extends Stack {
                 .runtime(Runtime.JAVA_11)
                 .architecture(Architecture.X86_64)
                 .build();
+    }
+
+    private static String candidates() {
+        List<String> candidates = new ArrayList<>();
+        for (Scenario it : Scenario.values()) {
+            candidates.add(it.name());
+        }
+        return String.join(COMMA, candidates);
     }
 }
