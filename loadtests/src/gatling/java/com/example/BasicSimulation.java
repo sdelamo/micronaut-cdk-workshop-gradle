@@ -1,6 +1,5 @@
 package com.example;
 
-import io.gatling.javaapi.core.CheckBuilder;
 import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
@@ -14,11 +13,11 @@ public class BasicSimulation extends Simulation {
   {
     if (System.getenv(API_URI) != null) {
       HttpProtocolBuilder httpProtocol = http.baseUrl(System.getenv(API_URI));
-      ScenarioBuilder scn = scenario("Simple").during(60).on(
-              exec(http("request_1")
+      ScenarioBuilder scn = scenario("Simple")
+              .exec(http("request_1")
                       .get("/")
-                      .check(status().is(200))));
-      setUp(scn.injectOpen(atOnceUsers(300))
+                      .check(status().is(200)));
+      setUp(scn.injectOpen(constantUsersPerSec(10).during(30))
               .protocols(httpProtocol)
       );
 

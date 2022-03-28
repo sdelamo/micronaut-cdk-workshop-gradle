@@ -34,7 +34,9 @@ public class AppStack extends Stack {
     private static final String PROXY_HANDLER = "io.micronaut.function.aws.proxy.MicronautLambdaHandler";
     private static final String FUNCTION_HANDLER = "com.example.core.FunctionHandler";
     private static final String VERSION_ZERO_ONE = "0.1";
-    public static final String COMMA = ",";
+    private static final String COMMA = ",";
+    private static final String TARGET = "target";
+    private static final String FUNCTION = "function";
 
 
     public AppStack(final Construct parent, final String id) {
@@ -63,53 +65,100 @@ public class AppStack extends Stack {
         Scenario scenario = Scenario.of(System.getenv(ENVIRONMENT_TEST_SUITE))
                 .orElseThrow(exceptionSupplier);
         switch (scenario) {
+            case MAVEN_APP:
+                return createFunctionJava(scope, Scenario.MAVEN_APP.name(), jarPath(BuildTool.MAVEN,"mvnapp", "demo"), PROXY_HANDLER);
+            case MAVEN_APP_NATIVE:
+                return createFunctionProvided(scope, Scenario.MAVEN_APP_NATIVE.name(), providedZipPath(BuildTool.MAVEN,"mvnapp"), PROXY_HANDLER);
+            case MAVEN_FUNCTION:
+                return createFunctionJava(scope, Scenario.MAVEN_FUNCTION.name(), jarPath(BuildTool.MAVEN,"mvnfunction", "demo"), FUNCTION_HANDLER);
+            case MAVEN_FUNCTION_NATIVE:
+                return createFunctionProvided(scope, Scenario.MAVEN_FUNCTION_NATIVE.name(), providedZipPath(BuildTool.MAVEN,"mvnfunction-native"), FUNCTION_HANDLER);
             case GRADLE_APP:
-                return createFunctionJava(scope, Scenario.GRADLE_APP.name(), jarPath("app"), PROXY_HANDLER);
+                return createFunctionJava(scope, Scenario.GRADLE_APP.name(), jarPath(BuildTool.GRADLE, "app"), PROXY_HANDLER);
             case GRADLE_APP_AOT:
-                return createFunctionJava(scope, Scenario.GRADLE_APP_AOT.name(), jarPath("app", true), PROXY_HANDLER);
+                return createFunctionJava(scope, Scenario.GRADLE_APP_AOT.name(), jarPath(BuildTool.GRADLE, "app", true), PROXY_HANDLER);
             case GRADLE_APP_NATIVE:
-                return createFunctionProvided(scope, Scenario.GRADLE_APP_NATIVE.name(), providedZipPath("app"), PROXY_HANDLER);
+                return createFunctionProvided(scope, Scenario.GRADLE_APP_NATIVE.name(), providedZipPath(BuildTool.GRADLE, "app"), PROXY_HANDLER);
             case GRADLE_APP_NATIVE_AOT:
-                return createFunctionProvided(scope, Scenario.GRADLE_APP_NATIVE_AOT.name(), providedZipPath("app", true), PROXY_HANDLER);
+                return createFunctionProvided(scope, Scenario.GRADLE_APP_NATIVE_AOT.name(), providedZipPath(BuildTool.GRADLE, "app", true), PROXY_HANDLER);
             case GRADLE_FUNCTION:
-                return createFunctionJava(scope, Scenario.GRADLE_FUNCTION.name(), jarPath("function"), FUNCTION_HANDLER);
+                return createFunctionJava(scope, Scenario.GRADLE_FUNCTION.name(), jarPath(BuildTool.GRADLE, "function"), FUNCTION_HANDLER);
             case GRADLE_FUNCTION_AOT:
-                return createFunctionJava(scope, Scenario.GRADLE_FUNCTION_AOT.name(), jarPath("function", true), FUNCTION_HANDLER);
+                return createFunctionJava(scope, Scenario.GRADLE_FUNCTION_AOT.name(), jarPath(BuildTool.GRADLE, "function", true), FUNCTION_HANDLER);
             case GRADLE_FUNCTION_NATIVE:
-                return  createFunctionProvided(scope, Scenario.GRADLE_FUNCTION_NATIVE.name(), providedZipPath("function-native"), FUNCTION_HANDLER);
+                return  createFunctionProvided(scope, Scenario.GRADLE_FUNCTION_NATIVE.name(), providedZipPath(BuildTool.GRADLE, "function-native"), FUNCTION_HANDLER);
             case GRADLE_FUNCTION_NATIVE_AOT:
-                return createFunctionProvided(scope, Scenario.GRADLE_FUNCTION_NATIVE_AOT.name(), providedZipPath("function-native", true), FUNCTION_HANDLER);
+                return createFunctionProvided(scope, Scenario.GRADLE_FUNCTION_NATIVE_AOT.name(), providedZipPath(BuildTool.GRADLE, "function-native", true), FUNCTION_HANDLER);
             default:
                 throw exceptionSupplier.get();
         }
     }
 
-    private static String jarPath(String moduleName, boolean optimized, String version) {
-        return String.join(SLASH, DOTDOT, moduleName, BUILD, LIBS, optimized ?
-                String.join(DOT, String.join(DASH, moduleName, version, ALL, OPTIMIZED), JAR) :
-                String.join(DOT, String.join(DASH, moduleName, version, ALL), JAR));
+    private static String jarPath(BuildTool buildTool, String moduleName, String artifactId, boolean optimized, String version) {
+        switch (buildTool) {
+            case MAVEN:
+                String filename = String.join(DOT, String.join(DASH, artifactId, version), JAR);
+                return mavenArtifact(moduleName, filename);
+            case GRADLE:
+            default:
+                return gradleArtifact(moduleName, gradleJarFilename(optimized, artifactId, version));
+        }
     }
 
-    private static String jarPath(String moduleName, boolean optimized) {
-        return jarPath(moduleName, optimized, VERSION_ZERO_ONE);
+    private static String gradleJarFilename(boolean optimized, String artifactId, String version) {
+        return optimized ?
+                String.join(DOT, String.join(DASH, artifactId, version, ALL, OPTIMIZED), JAR) :
+                String.join(DOT, String.join(DASH, artifactId, version, ALL), JAR);
     }
 
-    private static String jarPath(String moduleName) {
-        return jarPath(moduleName, false, VERSION_ZERO_ONE);
+    private static String jarPath(BuildTool buildTool, String moduleName, String artifactId, boolean optimized) {
+        return jarPath(buildTool, moduleName, artifactId, optimized, VERSION_ZERO_ONE);
     }
 
-    private static String providedZipPath(String moduleName, boolean optimized, String version) {
-        return String.join(SLASH, DOTDOT, moduleName, BUILD, LIBS, optimized ?
+    private static String jarPath(BuildTool buildTool, String moduleName, boolean optimized) {
+        return jarPath(buildTool, moduleName, moduleName, optimized, VERSION_ZERO_ONE);
+    }
+
+    private static String jarPath(BuildTool buildTool, String moduleName, String artifactId) {
+        return jarPath(buildTool, moduleName, artifactId, false, VERSION_ZERO_ONE);
+    }
+
+    private static String jarPath(BuildTool buildTool, String moduleName) {
+        return jarPath(buildTool, moduleName, moduleName, false, VERSION_ZERO_ONE);
+    }
+
+    private static String mavenArtifact(String moduleName, String filename) {
+        return String.join(SLASH, DOTDOT, moduleName, TARGET, filename);
+    }
+
+    private static String gradleArtifact(String moduleName, String filename) {
+        return String.join(SLASH, DOTDOT, moduleName, BUILD, LIBS, filename);
+    }
+
+    private static String providedZipPath(BuildTool buildTool, String moduleName, boolean optimized, String version) {
+        switch (buildTool) {
+            case MAVEN:
+                String filename = String.join(DOT, FUNCTION, ZIP);
+                return mavenArtifact(moduleName, filename);
+
+            case GRADLE:
+            default:
+                return gradleArtifact(moduleName, gradleZipFilename(optimized, moduleName, version));
+        }
+    }
+
+    private static String gradleZipFilename(boolean optimized, String moduleName, String version) {
+        return optimized ?
                 String.join(DOT, String.join(DASH, moduleName, version, OPTIMIZED, LAMBDA), ZIP) :
-                String.join(DOT, String.join(DASH, moduleName, version, LAMBDA), ZIP));
+                String.join(DOT, String.join(DASH, moduleName, version, LAMBDA), ZIP);
     }
 
-    private static String providedZipPath(String moduleName, boolean optimized) {
-        return providedZipPath(moduleName, optimized, VERSION_ZERO_ONE);
+    private static String providedZipPath(BuildTool buildTool, String moduleName, boolean optimized) {
+        return providedZipPath(buildTool, moduleName, optimized, VERSION_ZERO_ONE);
     }
 
-    private static String providedZipPath(String moduleName) {
-        return providedZipPath(moduleName, false, VERSION_ZERO_ONE);
+    private static String providedZipPath(BuildTool buildTool, String moduleName) {
+        return providedZipPath(buildTool, moduleName, false, VERSION_ZERO_ONE);
     }
 
     private static Function.Builder createFunctionBuilder(Construct scope,

@@ -3,6 +3,10 @@ package com.example;
 import java.util.Optional;
 
 public enum Scenario {
+    MAVEN_FUNCTION,
+    MAVEN_FUNCTION_NATIVE,
+    MAVEN_APP,
+    MAVEN_APP_NATIVE,
     GRADLE_APP,
     GRADLE_APP_AOT,
     GRADLE_APP_NATIVE,
@@ -31,6 +35,14 @@ public enum Scenario {
             return Optional.of(GRADLE_APP);
         } else if (str.equals("GRADLE_APP_AOT")) {
             return Optional.of(GRADLE_APP_AOT);
+        } else if (str.equals("MAVEN_APP")) {
+            return Optional.of(MAVEN_APP);
+        } else if (str.equals("MAVEN_APP_NATIVE")) {
+            return Optional.of(MAVEN_APP_NATIVE);
+        } else if (str.equals("MAVEN_FUNCTION")) {
+            return Optional.of(MAVEN_FUNCTION);
+        } else if (str.equals("MAVEN_FUNCTION_NATIVE")) {
+            return Optional.of(MAVEN_FUNCTION_NATIVE);
         }
         return Optional.empty();
     }
