@@ -1,12 +1,3 @@
-plugins {
-    id 'me.champeau.includegit' version '0.1.5'
-}
-gitRepositories {
-    include('micronaut-gradle-plugin') {
-        uri = 'https://github.com/micronaut-projects/micronaut-gradle-plugin.git'
-        branch = 'cc/rework-lambda-default'
-    }
-}
 rootProject.name = 'cdk-workshop-gradle'
 include "cdk"
 include "app"
