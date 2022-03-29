@@ -9,11 +9,13 @@ import static io.gatling.javaapi.http.HttpDsl.http;
 import static io.gatling.javaapi.http.HttpDsl.status;
 
 public class BasicSimulation extends Simulation {
-  public static final String API_URI = "API_URL";
+  private static final String API_URI = "API_URL";
+  private static final String TEST_SUITE = "TEST_SUITE";
   {
     if (System.getenv(API_URI) != null) {
       HttpProtocolBuilder httpProtocol = http.baseUrl(System.getenv(API_URI));
-      ScenarioBuilder scn = scenario("Simple")
+      String name = System.getenv(TEST_SUITE) != null ? System.getenv(TEST_SUITE) : "Simple";
+      ScenarioBuilder scn = scenario(name)
               .exec(http("request_1")
                       .get("/")
                       .check(status().is(200)));
