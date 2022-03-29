@@ -28,7 +28,7 @@ micronaut {
         annotations("com.example.*")
     }
     aot {
-        version = '1.0.0'
+        version = '1.0.1'
         optimizeServiceLoading = true
         convertYamlToJava = true
         precomputeOperations = true
