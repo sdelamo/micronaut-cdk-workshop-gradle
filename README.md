@@ -13,3 +13,7 @@
 | [ ]  | Gradle      | Function         | NATIVE           | FALSE  | `export TEST_SUITE=GRADLE_FUNCTION_NATIVE;./release.sh`  |
 | [ ]  | Gradle      | Function         | NATIVE           | TRUE  | `export TEST_SUITE=GRADLE_FUNCTION_NATIVE_AOT;./release.sh`  |
 | [ ]  | Maven       | Application      | NATIVE           | FALSE  | `export TEST_SUITE=MAVEN_APP_NATIVE;./release.sh`  |
+
+With serde
+
+`export TEST_SUITE=GRADLE_FUNCTION_SERDE;./release.sh`

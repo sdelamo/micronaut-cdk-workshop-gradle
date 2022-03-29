@@ -83,6 +83,8 @@ public class AppStack extends Stack {
                 return createFunctionProvided(scope, Scenario.GRADLE_APP_NATIVE_AOT.name(), providedZipPath(BuildTool.GRADLE, "app", true), PROXY_HANDLER);
             case GRADLE_FUNCTION:
                 return createFunctionJava(scope, Scenario.GRADLE_FUNCTION.name(), jarPath(BuildTool.GRADLE, "function"), FUNCTION_HANDLER);
+            case GRADLE_FUNCTION_SERDE:
+                return createFunctionJava(scope, Scenario.GRADLE_FUNCTION_SERDE.name(), jarPath(BuildTool.GRADLE, "function-serde"), "io.micronaut.aws.lambda.events.serde.FunctionHandler");
             case GRADLE_FUNCTION_AOT:
                 return createFunctionJava(scope, Scenario.GRADLE_FUNCTION_AOT.name(), jarPath(BuildTool.GRADLE, "function", true), FUNCTION_HANDLER);
             case GRADLE_FUNCTION_NATIVE:

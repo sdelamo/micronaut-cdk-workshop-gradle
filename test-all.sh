@@ -16,6 +16,11 @@ export TEST_SUITE=GRADLE_FUNCTION
 if [ $EXIT_STATUS -ne 0 ]; then
   exit $EXIT_STATUS
 fi
+export TEST_SUITE=GRADLE_FUNCTION_SERDE
+./release.sh || EXIT_STATUS=$?
+if [ $EXIT_STATUS -ne 0 ]; then
+  exit $EXIT_STATUS
+fi
 export TEST_SUITE=GRADLE_FUNCTION_AOT
 ./release.sh || EXIT_STATUS=$?
 if [ $EXIT_STATUS -ne 0 ]; then

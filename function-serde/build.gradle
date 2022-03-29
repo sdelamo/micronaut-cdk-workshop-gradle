@@ -1,0 +1,59 @@
+plugins {
+    id "io.micronaut.library"  version "3.3.1"
+    id "com.github.johnrengelman.shadow"  version "7.1.2"
+    id("io.micronaut.aot") version "3.3.1"
+}
+
+version = "0.1"
+group = "com.example"
+
+repositories {
+    mavenCentral()
+}
+ext {
+    serdeVersion="1.0.0"
+    awsLambdaJavaEventsVersion="3.11.0"
+    awsLambdaJavaSerializationVersion="1.0.0"
+}
+dependencies {
+    runtimeOnly("ch.qos.logback:logback-classic")
+    implementation(project(":function-core"))
+    annotationProcessor("io.micronaut.serde:micronaut-serde-processor:$serdeVersion")
+    implementation("io.micronaut.serde:micronaut-serde-jackson:$serdeVersion")
+    implementation("com.amazonaws:aws-lambda-java-serialization:$awsLambdaJavaSerializationVersion")
+    implementation("com.amazonaws:aws-lambda-java-events:$awsLambdaJavaEventsVersion")
+}
+
+java {
+    sourceCompatibility = JavaVersion.toVersion("11")
+    targetCompatibility = JavaVersion.toVersion("11")
+}
+
+micronaut {
+    runtime("lambda")
+    testRuntime("junit5")
+    processing {
+        incremental(true)
+        annotations("com.example.*")
+    }
+    aot {
+        version = '1.0.1'
+        optimizeServiceLoading = true
+        convertYamlToJava = true
+        precomputeOperations = true
+        cacheEnvironment = true
+        optimizeClassLoading = true
+        deduceEnvironment = true
+    }
+}
+
+shadowJar {
+    mergeServiceFiles()
+}
+
+configurations.all {
+    resolutionStrategy.dependencySubstitution {
+        substitute(module("io.micronaut:micronaut-jackson-databind"))
+                .using(module("io.micronaut.serde:micronaut-serde-jackson:$serdeVersion"))
+    }
+}

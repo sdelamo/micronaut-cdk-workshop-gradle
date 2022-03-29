@@ -20,6 +20,9 @@ then
 elif [ "$TEST_SUITE" == "GRADLE_FUNCTION" ]
 then
 ./gradlew :function:shadowJar --console=plain || EXIT_STATUS=$?
+elif [ "$TEST_SUITE" == "GRADLE_FUNCTION_SERDE" ]
+then
+./gradlew :function-serde:shadowJar --console=plain || EXIT_STATUS=$?
 elif [ "$TEST_SUITE" == "GRADLE_FUNCTION_AOT" ]
 then
 ./gradlew :function:optimizedJitJarAll --console=plain || EXIT_STATUS=$?

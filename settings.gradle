@@ -2,6 +2,7 @@ rootProject.name = 'cdk-workshop-gradle'
 include "cdk"
 include "app"
 include "function"
+include "function-serde"
 include "function-native"
 include "function-core"
 include "core"
