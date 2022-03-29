@@ -1,4 +1,4 @@
 #!/bin/bash
 cd cdk
-cdk destroy
+cdk destroy --force
 cd ..
