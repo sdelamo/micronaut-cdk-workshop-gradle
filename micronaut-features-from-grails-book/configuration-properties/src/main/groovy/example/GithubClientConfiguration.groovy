@@ -1,0 +1,5 @@
+package example
+
+interface GithubClientConfiguration {
+
+}

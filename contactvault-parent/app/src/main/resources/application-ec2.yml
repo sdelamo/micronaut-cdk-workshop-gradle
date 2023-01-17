@@ -1,0 +1,11 @@
+micronaut:
+  security:
+    oauth2:
+      clients:
+        default:
+          client-id: '1uqj5kmm93tjd0fnt7hsoe8pb4'
+          client-secret: '1k8hk224clm317uh12tug44pnchli0firt81el19n95rrfdb6l57'
+          openid:
+            issuer: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_aglWbOVhR/
+host:
+  fixed-host: 'https://ssgg8gs6p2.execute-api.us-east-1.amazonaws.com/prod/'
